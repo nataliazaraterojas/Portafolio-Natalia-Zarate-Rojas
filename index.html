@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalia Zarate Rojas | Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navegación -->
+    <nav class="nav">
+        <a href="#" class="nav__logo">NZ</a>
+        <ul class="nav__links">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto" class="nav__cta">Contacto</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Menú">
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="hero__greeting">¡Hola! Soy Natalia.</span>
+                </h1>
+                <p class="hero__headline">
+                    Diseño experiencias digitales <br>
+                    <span class="hero__highlight">memorables</span> para tu <span class="hero__rotating"><span class="hero__rotating-word">marca</span><span class="hero__rotating-word">negocio</span><span class="hero__rotating-word">startup</span><span class="hero__rotating-word">proyecto</span></span>
+                </p>
+                <div class="hero__actions">
+                    <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+                    <a href="#contacto" class="btn btn--secondary">Contáctame</a>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="assets/Imagen principal home.jpg" alt="Natalia Zarate - Diseñadora UX/UI">
+            </div>
+        </div>
+        <div class="hero__visual">
+            <div class="hero__shape hero__shape--1"></div>
+            <div class="hero__shape hero__shape--2"></div>
+            <div class="hero__shape hero__shape--3"></div>
+        </div>
+        <div class="hero__scroll">
+            <span>scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__left">
+                    <span class="about__label">SOBRE MÍ</span>
+                    <h2 class="about__title">Senior Product <br>& Strategic <br>Designer</h2>
+                </div>
+                <div class="about__right">
+                    <div class="about__text">
+                        <p><strong>Senior Product Designer</strong> con más de <strong>7 años de experiencia</strong> en diseño de producto digital, UX/UI, innovación y diseño de servicios. Con experiencia y conocimiento en <strong>creación de experiencias a partir de IA</strong>, optimización de flujos y mejora de KPIs como conversión, adopción digital y satisfacción del cliente.</p>
+                        <p>He co-liderado y participado en proyectos de alto impacto en <strong>banca, educación, entretenimiento y servicios</strong>, trabajando con equipos multidisciplinarios bajo enfoques <strong>Lean UX, Agile Scrum y Design Thinking</strong>. Mi enfoque combina usabilidad, eficiencia y visión estratégica de producto.</p>
+                        <a href="perfil.html" class="about__link">Conoce más sobre mí →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="about__stats">
+                <div class="stat">
+                    <div class="stat__number-wrapper">
+                        <span class="stat__number" data-target="30">0</span>
+                        <span class="stat__plus">+</span>
+                    </div>
+                    <span class="stat__label">Proyectos<br>completados</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__number-wrapper">
+                        <span class="stat__number" data-target="7">0</span>
+                        <span class="stat__plus">+</span>
+                    </div>
+                    <span class="stat__label">Años de<br>experiencia</span>
+                </div>
+                <div class="stat">
+                    <div class="stat__number-wrapper">
+                        <span class="stat__number" data-target="100">0</span>
+                        <span class="stat__plus">%</span>
+                    </div>
+                    <span class="stat__label">Clientes<br>satisfechos</span>
+                </div>
+            </div>
+            
+            <!-- Logos Carousel -->
+            <div class="logos-section">
+                <p class="logos-section__title">Empresas donde he trabajado</p>
+                <div class="logos-carousel">
+                    <div class="logos-carousel__track">
+                        <div class="logo-item">
+                            <span>Colsubsidio</span>
+                        </div>
+                        <div class="logo-item">
+                            <span>Haptica</span>
+                        </div>
+                        <div class="logo-item">
+                            <span>Banco de Bogotá</span>
+                        </div>
+                        <div class="logo-item">
+                            <span>Ubits</span>
+                        </div>
+                        <!-- Duplicados para el efecto infinito -->
+                        <div class="logo-item">
+                            <span>Colsubsidio</span>
+                        </div>
+                        <div class="logo-item">
+                            <span>Haptica</span>
+                        </div>
+                        <div class="logo-item">
+                            <span>Banco de Bogotá</span>
+                        </div>
+                        <div class="logo-item">
+                            <span>Ubits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">mi trabajo</span>
+                <h2 class="section-title">Proyectos <span>destacados</span></h2>
+            </div>
+            
+            <!-- Tabs de categorías -->
+            <div class="projects-tabs">
+                <button class="projects-tab active" data-category="ia">IA</button>
+                <button class="projects-tab" data-category="ux">UX</button>
+                <button class="projects-tab" data-category="estrategia">Estrategia</button>
+            </div>
+
+            <!-- Contenido IA -->
+            <div class="projects-category active" data-category="ia">
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder project-card__placeholder--ia">
+                                <span>IA</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="tag">IA Generativa</span>
+                                <span class="tag">Product Design</span>
+                            </div>
+                            <h3 class="project-card__title">Tareas y Planes - Ubits</h3>
+                            <p class="project-card__description">Módulo de IA que genera planes de acción, rutas de desarrollo y seguimiento de tareas en segundos.</p>
+                            <div class="project-card__links">
+                                <a href="proyecto-tareas-planes.html" class="project-link">Ver proyecto →</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder project-card__placeholder--ia">
+                                <span>IA</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="tag">Prototipado IA</span>
+                                <span class="tag">Cursor</span>
+                            </div>
+                            <h3 class="project-card__title">Flujos Inteligentes</h3>
+                            <p class="project-card__description">Creación de flujos escalables y componentes en código con prototipado rápido usando IA.</p>
+                            <div class="project-card__links">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Contenido UX -->
+            <div class="projects-category" data-category="ux">
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder project-card__placeholder--ux">
+                                <span>UX</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="tag">Banca Digital</span>
+                                <span class="tag">App & Web</span>
+                            </div>
+                            <h3 class="project-card__title">Tarjetas Digitales - Banco de Bogotá</h3>
+                            <p class="project-card__description">100% digitalización del proceso de solicitud de tarjetas. +65% en solicitudes y +35% en colocación.</p>
+                            <div class="project-card__links">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder project-card__placeholder--ux">
+                                <span>UX</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="tag">Pagos Inmediatos</span>
+                                <span class="tag">Sistema Nacional</span>
+                            </div>
+                            <h3 class="project-card__title">Bre-B - Sistema Nacional de Pagos</h3>
+                            <p class="project-card__description">Diseño de interfaces y flujos para registro y uso de llaves de pago a nivel nacional.</p>
+                            <div class="project-card__links">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Contenido Estrategia -->
+            <div class="projects-category" data-category="estrategia">
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder project-card__placeholder--estrategia">
+                                <span>Estrategia</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="tag">Service Design</span>
+                                <span class="tag">Impacto Social</span>
+                            </div>
+                            <h3 class="project-card__title">BLOC - Colsubsidio</h3>
+                            <p class="project-card__description">Diseño de experiencias y servicios con impacto social medible. Premiado en SER Colsubsidio 2020.</p>
+                            <div class="project-card__links">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <div class="project-card__placeholder project-card__placeholder--estrategia">
+                                <span>Estrategia</span>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="tag">Experiencia</span>
+                                <span class="tag">Optimización</span>
+                            </div>
+                            <h3 class="project-card__title">Rediseño Piscilago</h3>
+                            <p class="project-card__description">Rediseño de experiencia con -15% tiempos de espera y -10% en atención de alimentación.</p>
+                            <div class="project-card__links">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <span class="section-number">hablemos</span>
+                <h2 class="section-title">¿Tienes un <span>proyecto</span>?</h2>
+            </div>
+            <div class="contact__content">
+                <p class="contact__intro">Me encantaría conocer tu idea y ayudarte a hacerla realidad.</p>
+                <form class="contact__form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Nombre</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group form-group--full">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Mensaje</label>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--large">
+                        <span>Enviar mensaje</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </form>
+                <div class="contact__social">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="mailto:hola@nataliazarate.com" class="social-link" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">diseñado con amor por Natalia Zarate ♡</p>
+                <p class="footer__copyright">© 2024 — Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
