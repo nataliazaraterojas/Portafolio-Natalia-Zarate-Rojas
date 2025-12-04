@@ -141,35 +141,42 @@
             
             <!-- Desktop Mockup with Comparison -->
             <div class="desktop-comparison">
-                <!-- Desktop Frame -->
-                <div class="desktop-comparison__frame">
-                    <div class="desktop-comparison__browser">
-                        <div class="desktop-comparison__dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <div class="desktop-comparison__url">ubits.com/tareas-planes</div>
-                    </div>
-                    <div class="desktop-comparison__screen" id="compScreen">
-                        <!-- Después (imagen de fondo - lado derecho) -->
-                        <div class="comp-before">
-                            <img src="assets/tareas y planes/Tarea- comentarios y evidencias.png" alt="Después">
-                        </div>
-                        <!-- Antes (imagen que se revela - lado izquierdo) -->
-                        <div class="comp-after" id="compAfter">
-                            <img src="assets/tareas y planes/Propuesta Tareas.svg" alt="Antes">
-                        </div>
-                        <div class="comp-handle" id="compHandle">
-                            <span class="comp-handle__label comp-handle__label--before">ANTES</span>
-                            <div class="comp-handle__line"></div>
-                            <div class="comp-handle__circle">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                    <path d="M18 8L22 12L18 16"/>
-                                    <path d="M6 8L2 12L6 16"/>
-                                </svg>
+                <div class="desktop-mockup-modern">
+                    <!-- Monitor -->
+                    <div class="desktop-mockup-modern__monitor">
+                        <div class="desktop-mockup-modern__bezel">
+                            <div class="desktop-mockup-modern__screen" id="compScreen">
+                                <!-- Después (imagen de fondo - lado derecho) -->
+                                <div class="comp-before">
+                                    <img src="assets/tareas y planes/Después .png" alt="Después">
+                                </div>
+                                <!-- Antes (imagen que se revela - lado izquierdo) -->
+                                <div class="comp-after" id="compAfter">
+                                    <img src="assets/tareas y planes/Propuesta Tareas.svg" alt="Antes">
+                                </div>
+                                <div class="comp-handle" id="compHandle">
+                                    <span class="comp-handle__label comp-handle__label--before">ANTES</span>
+                                    <div class="comp-handle__line"></div>
+                                    <div class="comp-handle__circle">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                            <path d="M18 8L22 12L18 16"/>
+                                            <path d="M6 8L2 12L6 16"/>
+                                        </svg>
+                                    </div>
+                                    <div class="comp-handle__line"></div>
+                                    <span class="comp-handle__label comp-handle__label--after">DESPUÉS</span>
+                                </div>
                             </div>
-                            <div class="comp-handle__line"></div>
-                            <span class="comp-handle__label comp-handle__label--after">DESPUÉS</span>
                         </div>
+                        <!-- Stand -->
+                        <div class="desktop-mockup-modern__stand"></div>
+                    </div>
+                    <!-- Peripherals -->
+                    <div class="desktop-mockup-modern__peripherals">
+                        <!-- Keyboard -->
+                        <div class="desktop-mockup-modern__keyboard"></div>
+                        <!-- Mouse -->
+                        <div class="desktop-mockup-modern__mouse"></div>
                     </div>
                 </div>
                 <p class="desktop-comparison__hint">← Arrastra para comparar →</p>
@@ -254,66 +261,106 @@
                 
                 <div class="timeline-carousel__track" id="timelineTrack">
                     <!-- Slide 1 - MVP -->
-                    <div class="timeline-slide" data-img="assets/tareas y planes/Crear plan V 1.0 .png">
+                    <div class="timeline-slide" 
+                         data-version="v1"
+                         data-images='["assets/tareas y planes/Versión 1/nv home 1.1.png", "assets/tareas y planes/Versión 1/nv plan 1.1.png", "assets/tareas y planes/Versión 1/Nv tarea 1.1.png"]'>
                         <div class="timeline-slide__mockup">
-                            <div class="slide-mockup">
-                                <div class="slide-mockup__frame"></div>
-                                <div class="slide-mockup__screen">
-                                    <img src="assets/tareas y planes/Crear plan V 1.0 .png" alt="V1.0">
+                            <div class="macbook-mockup">
+                                <div class="macbook-mockup__screen">
+                                    <div class="macbook-mockup__bezel">
+                                        <div class="macbook-mockup__camera"></div>
+                                        <div class="macbook-mockup__display">
+                                            <img class="mockup-animated-img" src="assets/tareas y planes/Versión 1/nv home 1.1.png" alt="V1.0">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide-mockup__stand"></div>
+                                <div class="macbook-mockup__base">
+                                    <div class="macbook-mockup__keyboard"></div>
+                                    <div class="macbook-mockup__trackpad"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="timeline-slide__content">
                             <div class="slide-version">
                                 <span class="slide-version__number">01</span>
-                                <span class="slide-version__tag">MVP</span>
+                                <span class="slide-version__tag">V1.0</span>
                             </div>
-                            <h4 class="timeline-slide__title">MVP Inicial</h4>
-                            <p class="timeline-slide__desc">Primera versión con funcionalidades básicas de creación de tareas y planes manuales.</p>
+                            <h4 class="timeline-slide__title">Funcionalidades clave</h4>
                             <ul class="timeline-slide__features">
-                                <li>Creación manual de planes</li>
-                                <li>Asignación de responsables</li>
-                                <li>Calendario básico</li>
+                                <li>Crear, editar, priorizar y completar tareas</li>
+                                <li>Agrupación inteligente en planes</li>
+                                <li>Asignación 1 a 1 y seguimiento en tiempo real</li>
+                                <li>Notificaciones de asignación y actualización</li>
+                                <li>Planes operativos y flexibles potenciados con IA</li>
                             </ul>
+                            <div class="timeline-slide__use-cases">
+                                <strong>Casos de uso habilitados</strong>
+                                <ul class="timeline-slide__features">
+                                    <li>Gestión de tareas individuales: organización personal, seguimiento diario y priorización</li>
+                                    <li>Gestión de tareas colaborativas: coordinación entre equipos, seguimiento de responsabilidades y visibilidad del avance</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Slide 2 - Dashboard -->
-                    <div class="timeline-slide" data-img="assets/tareas y planes/Dashboard de planes V1.1.png">
+                    <div class="timeline-slide" 
+                         data-version="v1.1"
+                         data-images='["assets/tareas y planes/Versión 2/Nv. Home 1.2.png", "assets/tareas y planes/Versión 2/Nueva versión V.12 .png", "assets/tareas y planes/Versión 2/Nueva versión comentarios V 1.2.png"]'>
                         <div class="timeline-slide__mockup">
-                            <div class="slide-mockup">
-                                <div class="slide-mockup__frame"></div>
-                                <div class="slide-mockup__screen">
-                                    <img src="assets/tareas y planes/Dashboard de planes V1.1.png" alt="V1.1">
+                            <div class="macbook-mockup">
+                                <div class="macbook-mockup__screen">
+                                    <div class="macbook-mockup__bezel">
+                                        <div class="macbook-mockup__camera"></div>
+                                        <div class="macbook-mockup__display">
+                                            <img class="mockup-animated-img" src="assets/tareas y planes/Versión 2/Nv. Home 1.2.png" alt="V1.1">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide-mockup__stand"></div>
+                                <div class="macbook-mockup__base">
+                                    <div class="macbook-mockup__keyboard"></div>
+                                    <div class="macbook-mockup__trackpad"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="timeline-slide__content">
                             <div class="slide-version">
                                 <span class="slide-version__number">02</span>
-                                <span class="slide-version__tag">Dashboard</span>
+                                <span class="slide-version__tag">V1.2</span>
                             </div>
-                            <h4 class="timeline-slide__title">Dashboard y métricas</h4>
-                            <p class="timeline-slide__desc">Dashboard centralizado para visualizar el progreso de planes y métricas de seguimiento.</p>
+                            <h4 class="timeline-slide__title">Funcionalidades clave</h4>
                             <ul class="timeline-slide__features">
-                                <li>Vista panorámica</li>
-                                <li>Métricas de progreso</li>
-                                <li>Notificaciones</li>
+                                <li>Creación de planes de desarrollo individual basados en resultados de 360</li>
+                                <li>Registro de evidencias y comentarios en cada tarea</li>
+                                <li>Filtros avanzados para seguimiento por líderes y HR</li>
                             </ul>
+                            <div class="timeline-slide__use-cases">
+                                <strong>Casos de uso habilitados</strong>
+                                <ul class="timeline-slide__features">
+                                    <li>Gestión de tareas desde RRHH: acompañamiento al desarrollo, seguimiento estructurado y trazabilidad de métricas de crecimiento</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Slide 3 - Evidencias -->
-                    <div class="timeline-slide" data-img="assets/tareas y planes/Tarea- comentarios y evidencias.png">
+                    <div class="timeline-slide" 
+                         data-version="v2"
+                         data-images='["assets/tareas y planes/Versión 2/Nueva versión comentarios V 1.2.png", "assets/tareas y planes/Versión 2/Nueva versión V.12 .png", "assets/tareas y planes/Versión 2/Nv. Home 1.2.png"]'>
                         <div class="timeline-slide__mockup">
-                            <div class="slide-mockup">
-                                <div class="slide-mockup__frame"></div>
-                                <div class="slide-mockup__screen">
-                                    <img src="assets/tareas y planes/Tarea- comentarios y evidencias.png" alt="V2.0">
+                            <div class="macbook-mockup">
+                                <div class="macbook-mockup__screen">
+                                    <div class="macbook-mockup__bezel">
+                                        <div class="macbook-mockup__camera"></div>
+                                        <div class="macbook-mockup__display">
+                                            <img class="mockup-animated-img" src="assets/tareas y planes/Versión 2/Nueva versión comentarios V 1.2.png" alt="V2.0">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide-mockup__stand"></div>
+                                <div class="macbook-mockup__base">
+                                    <div class="macbook-mockup__keyboard"></div>
+                                    <div class="macbook-mockup__trackpad"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="timeline-slide__content">
@@ -332,29 +379,47 @@
                     </div>
                     
                     <!-- Slide 4 - IA -->
-                    <div class="timeline-slide timeline-slide--highlight" data-img="assets/tareas y planes/Crear plan flexible con IA_.png">
+                    <div class="timeline-slide timeline-slide--highlight" 
+                         data-version="v3"
+                         data-images='["assets/tareas y planes/Versión 3/Nueva versión V 1.3.png", "assets/tareas y planes/Versión 3/Nueva versión Dashboard V 1.3. 1.png", "assets/tareas y planes/Versión 3/Drawer de creación de plan v 1.3.png", "assets/tareas y planes/Versión 3/Nueva versión plantilla V 1.3.png", "assets/tareas y planes/Versión 3/Nueva versión template V 1.3.png"]'>
                         <div class="timeline-slide__mockup">
-                            <div class="slide-mockup slide-mockup--glow">
-                                <div class="slide-mockup__frame"></div>
-                                <div class="slide-mockup__screen">
-                                    <img src="assets/tareas y planes/Crear plan flexible con IA_.png" alt="V3.0 IA">
+                            <div class="macbook-mockup macbook-mockup--glow">
+                                <div class="macbook-mockup__screen">
+                                    <div class="macbook-mockup__bezel">
+                                        <div class="macbook-mockup__camera"></div>
+                                        <div class="macbook-mockup__display">
+                                            <img class="mockup-animated-img" src="assets/tareas y planes/Versión 3/Nueva versión V 1.3.png" alt="V3.0 IA">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide-mockup__stand"></div>
+                                <div class="macbook-mockup__base">
+                                    <div class="macbook-mockup__keyboard"></div>
+                                    <div class="macbook-mockup__trackpad"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="timeline-slide__content">
                             <div class="slide-version slide-version--highlight">
-                                <span class="slide-version__number">04</span>
-                                <span class="slide-version__tag">✨ IA</span>
+                                <span class="slide-version__number">03</span>
+                                <span class="slide-version__tag">V1.3</span>
                             </div>
-                            <h4 class="timeline-slide__title">Integración de IA</h4>
-                            <p class="timeline-slide__desc">Transformación con IA generativa que crea planes en segundos.</p>
-                            <ul class="timeline-slide__features">
-                                <li>Generación con IA</li>
-                                <li>Planes flexibles</li>
-                                <li>Automatización total</li>
-                            </ul>
-                            <span class="timeline-slide__badge">Versión actual</span>
+                            <h4 class="timeline-slide__title">V1.3 — Activación operativa</h4>
+                            <div class="timeline-slide__use-cases">
+                                <strong>Funcionalidades</strong>
+                                <ul class="timeline-slide__features">
+                                    <li>Buscadores avanzados por nombre del plan y de la tarea</li>
+                                    <li>Embebido de tareas y planes dentro de la plataforma</li>
+                                    <li>CRUD completo de plantillas, permitiendo crear, editar y administrar modelos reutilizables</li>
+                                    <li>Carga y asignación masiva de planes, optimizando la gestión de grandes equipos</li>
+                                    <li>Modalidad de Plan individual o Plan para todos, que flexibiliza la ejecución según el objetivo</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-slide__use-cases">
+                                <strong>Casos de uso habilitados</strong>
+                                <ul class="timeline-slide__features">
+                                    <li>Gestión de tareas de RRHH y base para la gestión de tareas operativas a gran escala</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -404,11 +469,73 @@
             const prevBtn = document.getElementById('timelinePrev');
             const nextBtn = document.getElementById('timelineNext');
             let currentSlide = 0;
+            let animationIntervals = {};
+            
+            // Función para animar imágenes de un slide
+            function animateSlideImages(slideIndex) {
+                const slide = slides[slideIndex];
+                if (!slide) return;
+                
+                // Detener animación anterior si existe
+                if (animationIntervals[slideIndex]) {
+                    clearInterval(animationIntervals[slideIndex]);
+                    delete animationIntervals[slideIndex];
+                }
+                
+                // Obtener imágenes del data attribute
+                const imagesData = slide.getAttribute('data-images');
+                if (!imagesData) return;
+                
+                try {
+                    const images = JSON.parse(imagesData);
+                    if (!images || images.length === 0) return;
+                    
+                    const imgElement = slide.querySelector('.mockup-animated-img');
+                    if (!imgElement) return;
+                    
+                    let currentImageIndex = 0;
+                    
+                    // Función para cambiar imagen con fade
+                    function changeImage() {
+                        if (images.length <= 1) return;
+                        
+                        // Fade out
+                        imgElement.style.opacity = '0';
+                        
+                        setTimeout(() => {
+                            // Cambiar imagen
+                            currentImageIndex = (currentImageIndex + 1) % images.length;
+                            imgElement.src = images[currentImageIndex];
+                            
+                            // Fade in
+                            setTimeout(() => {
+                                imgElement.style.opacity = '1';
+                            }, 50);
+                        }, 300);
+                    }
+                    
+                    // Cambiar imagen cada 3.5 segundos
+                    animationIntervals[slideIndex] = setInterval(changeImage, 3500);
+                } catch (e) {
+                    console.error('Error parsing images data:', e);
+                }
+            }
+            
+            // Detener todas las animaciones
+            function stopAllAnimations() {
+                Object.keys(animationIntervals).forEach(key => {
+                    clearInterval(animationIntervals[key]);
+                    delete animationIntervals[key];
+                });
+            }
             
             function goToSlide(index) {
                 if (index < 0) index = 0;
                 if (index >= slides.length) index = slides.length - 1;
                 currentSlide = index;
+                
+                // Detener todas las animaciones
+                stopAllAnimations();
                 
                 // Move track
                 track.style.transform = `translateX(-${index * 100}%)`;
@@ -426,6 +553,11 @@
                 slides.forEach((slide, i) => {
                     slide.classList.toggle('is-active', i === index);
                 });
+                
+                // Iniciar animación del slide activo
+                setTimeout(() => {
+                    animateSlideImages(index);
+                }, 500);
             }
             
             // Navigation buttons
@@ -458,8 +590,75 @@
             
             // Initialize
             goToSlide(0);
+            
+            // Pausar animación al hacer hover sobre el mockup
+            slides.forEach((slide, index) => {
+                const mockup = slide.querySelector('.macbook-mockup');
+                if (mockup) {
+                    mockup.addEventListener('mouseenter', () => {
+                        if (animationIntervals[index]) {
+                            clearInterval(animationIntervals[index]);
+                        }
+                    });
+                    mockup.addEventListener('mouseleave', () => {
+                        if (slide.classList.contains('is-active')) {
+                            animateSlideImages(index);
+                        }
+                    });
+                }
+            });
         })();
         </script>
+    </section>
+
+    <!-- ¿Qué rol juega la IA en este módulo? -->
+    <section class="moodboard-section">
+        <div class="moodboard-container">
+            <div class="moodboard-header">
+                <span class="moodboard-number">02</span>
+                <h2 class="moodboard-title">¿Qué rol juega la IA en este módulo?</h2>
+            </div>
+            
+            <div class="moodboard-grid">
+                <!-- Card 1: Acelera la creación de planes -->
+                <div class="moodboard-card moodboard-card--tall">
+                    <div class="moodboard-card__image">
+                        <img src="assets/tareas%20y%20planes/%20Rol%20de%20IA.png" alt="Acelera la creación de planes">
+                    </div>
+                    <div class="moodboard-card__content">
+                        <h4>1. Acelera la creación de planes</h4>
+                        <p>A partir de un objetivo + contexto (texto o documento), la IA propone grupos de tareas, prioridades y secuencia. Reduce el tiempo de diseño de un plan de horas a minutos.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Genera planes listos para ejecutar -->
+                <div class="moodboard-card">
+                    <div class="moodboard-card__image">
+                        <img src="assets/tareas y planes/Plan de IA .png" alt="Genera planes listos para ejecutar">
+                    </div>
+                    <p class="moodboard-card__text"><strong>2. Genera planes listos para ejecutar</strong><br>La IA entrega una estructura inicial que el usuario solo debe revisar y ajustar. Útil para: Onboarding, PDIs, planes operativos y campañas.</p>
+                </div>
+                
+                <!-- Card 3: Estadística - Reducción de tiempo -->
+                <div class="moodboard-card moodboard-card--stat">
+                    <span class="moodboard-stat">Horas → Minutos</span>
+                    <p class="moodboard-stat-label">Reducción del tiempo de diseño de un plan.</p>
+                </div>
+                
+                <!-- Card 4: Conecta diagnóstico con acción -->
+                <div class="moodboard-card moodboard-card--text moodboard-card--wide">
+                    <p><strong>3. Conecta diagnóstico con acción</strong><br>Desde Evaluaciones 360, permite generar PDIs automáticos (5 cursos recomendados + 8–10 tareas sugeridas). Traduce brechas en acciones ejecutables.</p>
+                </div>
+                
+                <!-- Card 5: Integración con Evaluaciones 360 -->
+                <div class="moodboard-card moodboard-card--wide moodboard-card--fullwidth">
+                    <div class="moodboard-card__image moodboard-card__image--top">
+                        <img src="assets/tareas y planes/360.png" alt="Integración con Evaluaciones 360">
+                    </div>
+                    <p class="moodboard-card__overlay-text"><strong>Integración con Evaluaciones 360:</strong> La IA genera PDIs automáticos basados en resultados de evaluación, recomendando cursos y tareas específicas para cerrar brechas identificadas.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- 03 · Nuevo proceso de trabajo -->

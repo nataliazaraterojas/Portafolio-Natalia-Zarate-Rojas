@@ -4640,55 +4640,147 @@ section {
     color: white;
 }
 
-.desktop-comparison__frame {
-    background: #1a1a1a;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
-}
-
-.desktop-comparison__browser {
-    background: #2d2d2d;
-    padding: 12px 16px;
+/* Modern Desktop Mockup - All-in-one style */
+.desktop-mockup-modern {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    filter: drop-shadow(0 30px 80px rgba(0, 0, 0, 0.25));
+    position: relative;
 }
 
-.desktop-comparison__dots {
+.desktop-mockup-modern__keyboard,
+.desktop-mockup-modern__mouse {
+    position: relative;
+}
+
+.desktop-mockup-modern__monitor {
+    width: 100%;
     display: flex;
-    gap: 6px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.desktop-comparison__dots span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #3d3d3d;
+.desktop-mockup-modern__bezel {
+    width: 100%;
+    background: linear-gradient(180deg, #e8e8e8 0%, #d0d0d0 100%);
+    border-radius: 8px 8px 0 0;
+    padding: 8px;
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.5),
+        inset 0 -2px 4px rgba(0,0,0,0.1);
 }
 
-.desktop-comparison__dots span:nth-child(1) { background: #ff5f57; }
-.desktop-comparison__dots span:nth-child(2) { background: #ffbd2e; }
-.desktop-comparison__dots span:nth-child(3) { background: #28ca42; }
-
-.desktop-comparison__url {
-    flex: 1;
-    background: #1a1a1a;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    color: #888;
-    text-align: center;
-}
-
-.desktop-comparison__screen {
+.desktop-mockup-modern__screen {
     position: relative;
     width: 100%;
     aspect-ratio: 16/10;
-    background: #f5f5f5;
+    background: #000;
+    border-radius: 4px;
     overflow: hidden;
     cursor: ew-resize;
     user-select: none;
+    border: 1px solid #1a1a1a;
+}
+
+.desktop-mockup-modern__stand {
+    width: 60%;
+    height: 40px;
+    background: linear-gradient(180deg, #d0d0d0 0%, #b8b8b8 50%, #a0a0a0 100%);
+    border-radius: 0 0 6px 6px;
+    position: relative;
+    box-shadow: 
+        0 4px 8px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.desktop-mockup-modern__stand::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 6px;
+    background: linear-gradient(180deg, #c0c0c0 0%, #888 100%);
+    border-radius: 0 0 4px 4px;
+}
+
+.desktop-mockup-modern__peripherals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.desktop-mockup-modern__keyboard {
+    width: 65%;
+    height: 24px;
+    background: linear-gradient(180deg, #f8f8f8 0%, #e8e8e8 100%);
+    border-radius: 4px;
+    box-shadow: 
+        0 4px 12px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.9),
+        inset 0 -1px 0 rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.desktop-mockup-modern__keyboard::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 3px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 8px,
+        rgba(0,0,0,0.08) 8px,
+        rgba(0,0,0,0.08) 10px
+    );
+    border-radius: 2px;
+}
+
+.desktop-mockup-modern__mouse {
+    width: 48px;
+    height: 32px;
+    background: linear-gradient(135deg, #e8e8e8 0%, #d8d8d8 100%);
+    border-radius: 16px 16px 6px 6px;
+    box-shadow: 
+        0 4px 12px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.9),
+        inset 0 -1px 0 rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.desktop-mockup-modern__mouse::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 50%, transparent 100%);
+    border-radius: 2px;
+}
+
+.desktop-mockup-modern__mouse::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 2px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 1px;
 }
 
 /* Simple comparison styles */
@@ -4717,8 +4809,8 @@ section {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center;
-    background: #f5f5f5;
+    object-position: top center;
+    background: #fff;
 }
 
 
@@ -5202,66 +5294,135 @@ section {
     transform: scale(1);
 }
 
-/* Mockup in slide */
+/* Mockup in slide - MacBook Pro Style */
 .timeline-slide__mockup {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.slide-mockup {
+.macbook-mockup {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     filter: drop-shadow(0 30px 60px rgba(0,0,0,0.4));
     transition: all 0.5s ease;
+    perspective: 1000px;
 }
 
-.slide-mockup--glow {
+.macbook-mockup--glow {
     filter: 
         drop-shadow(0 30px 60px rgba(0,0,0,0.4))
         drop-shadow(0 0 40px rgba(12, 91, 239, 0.3));
 }
 
-.slide-mockup__frame {
-    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
-    border-radius: 12px 12px 0 0;
-    padding: 10px 0;
+/* Screen (top part) */
+.macbook-mockup__screen {
+    width: 100%;
     position: relative;
+    transform-style: preserve-3d;
 }
 
-.slide-mockup__frame::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background: #3a3a3a;
+.macbook-mockup__bezel {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+    border-radius: 8px 8px 0 0;
+    padding: 6px;
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        0 2px 8px rgba(0,0,0,0.3);
+}
+
+.macbook-mockup__camera {
+    width: 4px;
+    height: 4px;
+    background: #000;
     border-radius: 50%;
+    margin: 0 auto 4px;
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.2);
+}
+
+.macbook-mockup__display {
+    background: #000;
+    aspect-ratio: 16 / 10;
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+.macbook-mockup__display img,
+.mockup-animated-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top center;
+    transition: opacity 0.3s ease-in-out;
+    background: #fff;
+    display: block;
+}
+
+/* Base (bottom part with keyboard) */
+.macbook-mockup__base {
+    width: 100%;
+    height: 24px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%);
+    border-radius: 0 0 8px 8px;
+    margin-top: 2px;
+    position: relative;
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        0 4px 12px rgba(0,0,0,0.3);
+}
+
+.macbook-mockup__base::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+}
+
+/* Keyboard area */
+.macbook-mockup__keyboard {
+    width: 85%;
+    height: 12px;
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+    margin: 4px auto 2px;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.macbook-mockup__keyboard::before {
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 3px,
+        rgba(255,255,255,0.05) 3px,
+        rgba(255,255,255,0.05) 4px
+    );
 }
 
-.slide-mockup__screen {
-    background: #000;
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-    border-left: 2px solid #333;
-    border-right: 2px solid #333;
-}
-
-.slide-mockup__screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top left;
-}
-
-.slide-mockup__stand {
-    width: 35%;
-    height: 40px;
-    background: linear-gradient(180deg, #1a1a1a 0%, #333 100%);
-    margin: 0 auto;
-    border-radius: 0 0 4px 4px;
-    position: relative;
+/* Trackpad */
+.macbook-mockup__trackpad {
+    width: 30%;
+    height: 6px;
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+    margin: 2px auto;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .slide-mockup__stand::after {
@@ -5358,6 +5519,19 @@ section {
     color: #00d4ff;
 }
 
+.timeline-slide__use-cases {
+    margin-top: 24px;
+}
+
+.timeline-slide__use-cases strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 12px;
+}
+
 .timeline-slide__badge {
     display: inline-block;
     margin-top: 20px;
@@ -5374,19 +5548,6 @@ section {
 /* Highlight slide */
 .timeline-slide--highlight .timeline-slide__content {
     position: relative;
-}
-
-.timeline-slide--highlight .timeline-slide__content::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    background: linear-gradient(135deg, rgba(12, 91, 239, 0.1) 0%, rgba(0, 212, 255, 0.05) 100%);
-    border-radius: 20px;
-    border: 1px solid rgba(0, 212, 255, 0.2);
-    z-index: -1;
 }
 
 /* Responsive */
@@ -10832,8 +10993,8 @@ body.neutral-theme * {
 /* Bento Grid Layout */
 .moodboard-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
     gap: 16px;
 }
 
@@ -10853,6 +11014,19 @@ body.neutral-theme * {
 
 .moodboard-card--tall .moodboard-card__image {
     height: 60%;
+    min-height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+    display: block;
+}
+
+.moodboard-card--tall .moodboard-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .moodboard-card--tall .moodboard-card__content {
@@ -10906,6 +11080,10 @@ body.neutral-theme * {
     position: relative;
 }
 
+.moodboard-card--fullwidth {
+    grid-column: 1 / -1;
+}
+
 .moodboard-card--wide .moodboard-card__image {
     height: 100%;
     min-height: 200px;
@@ -10934,6 +11112,10 @@ body.neutral-theme * {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.moodboard-card__image--top img {
+    object-position: top;
 }
 
 .moodboard-card__text {
@@ -10984,6 +11166,15 @@ body.neutral-theme * {
     font-size: 0.95rem;
     color: #555;
     line-height: 1.6;
+}
+
+.moodboard-card--text.moodboard-card--wide {
+    grid-column: span 2;
+}
+
+/* En grid de 3 columnas, ajustar wide */
+.moodboard-grid .moodboard-card--wide:not(.moodboard-card--fullwidth) {
+    grid-column: span 2;
 }
 
 /* Collab card */
