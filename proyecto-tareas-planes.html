@@ -14,6 +14,14 @@
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
+    <!-- Botón cerrar -->
+    <a href="index.html" class="project-close-btn" aria-label="Cerrar y volver al inicio">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </a>
+
     <!-- Navegación -->
     <nav class="nav nav--light">
         <a href="index.html" class="nav__logo">NZ</a>
@@ -30,7 +38,6 @@
 
     <!-- Hero con Video -->
     <header class="video-hero">
-        <a href="index.html#proyectos" class="video-hero__back">← Volver a proyectos</a>
         <div class="video-hero__video-wrapper">
             <video class="video-hero__video" autoplay muted loop playsinline>
                 <source src="assets/tareas y planes/video de planes y tareas.mp4" type="video/mp4">
@@ -423,12 +430,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <button class="timeline-nav-btn timeline-nav-btn--right" id="timelineNext">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 18l6-6-6-6"/>
-                    </svg>
-                </button>
             </div>
             
             <!-- Timeline Line (abajo) -->
@@ -467,7 +468,6 @@
             const dots = document.querySelectorAll('.timeline-dot');
             const progress = document.getElementById('timelineProgress');
             const prevBtn = document.getElementById('timelinePrev');
-            const nextBtn = document.getElementById('timelineNext');
             let currentSlide = 0;
             let animationIntervals = {};
             
@@ -561,8 +561,9 @@
             }
             
             // Navigation buttons
-            prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
-            nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+            }
             
             // Dot navigation
             dots.forEach((dot, i) => {
