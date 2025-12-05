@@ -11286,14 +11286,29 @@ body.neutral-theme * {
    MOODBOARD / BENTO GRID SECTION
    ============================================ */
 .moodboard-section {
-    padding: 80px 0;
+    padding: var(--space-md) 0; /* Mobile: menos padding */
     background: #f8f9fa;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+    .moodboard-section {
+        padding: 80px 0; /* Desktop: padding original */
+    }
 }
 
 .moodboard-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 var(--space-sm); /* Mobile: menos padding */
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .moodboard-container {
+        padding: 0 40px; /* Desktop: padding original */
+    }
 }
 
 .moodboard-header {
@@ -11311,17 +11326,32 @@ body.neutral-theme * {
 
 .moodboard-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
     font-weight: 700;
     color: #1a1a1a;
+    line-height: 1.2;
 }
 
-/* Bento Grid Layout */
+/* Bento Grid Layout - Mobile First */
 .moodboard-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr; /* Mobile: 1 columna - apiladas verticalmente */
     grid-auto-rows: auto;
-    gap: 16px;
+    gap: var(--space-sm);
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .moodboard-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columnas */
+        gap: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .moodboard-grid {
+        grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columnas */
+    }
 }
 
 .moodboard-card {
@@ -11329,18 +11359,28 @@ body.neutral-theme * {
     border-radius: 16px;
     overflow: hidden;
     position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 /* Card tall - spans 2 rows */
 .moodboard-card--tall {
-    grid-row: span 2;
+    grid-row: span 1; /* Mobile: 1 fila */
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .moodboard-card--tall {
+        grid-row: span 2; /* Desktop: 2 filas */
+    }
 }
 
 .moodboard-card--tall .moodboard-card__image {
     height: 60%;
-    min-height: 200px;
+    min-height: clamp(150px, 30vw, 200px); /* Responsive min-height */
     overflow: hidden;
     flex-shrink: 0;
     width: 100%;
@@ -11402,12 +11442,24 @@ body.neutral-theme * {
 
 /* Card wide - spans 2 columns */
 .moodboard-card--wide {
-    grid-column: span 2;
+    grid-column: span 1; /* Mobile: 1 columna */
     position: relative;
+    width: 100%;
 }
 
 .moodboard-card--fullwidth {
-    grid-column: 1 / -1;
+    grid-column: span 1; /* Mobile: 1 columna */
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .moodboard-card--wide {
+        grid-column: span 2; /* Tablet+: 2 columnas */
+    }
+    
+    .moodboard-card--fullwidth {
+        grid-column: 1 / -1; /* Tablet+: todas las columnas */
+    }
 }
 
 .moodboard-card--wide .moodboard-card__image {
@@ -11445,9 +11497,9 @@ body.neutral-theme * {
 }
 
 .moodboard-card__text {
-    padding: 16px 20px;
+    padding: clamp(12px, 3vw, 16px) clamp(16px, 4vw, 20px); /* Responsive padding */
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 3vw, 0.9rem); /* Responsive font size */
     color: #555;
     line-height: 1.5;
 }
@@ -11458,14 +11510,14 @@ body.neutral-theme * {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 32px 20px;
+    padding: clamp(20px, 5vw, 32px) clamp(16px, 4vw, 20px); /* Responsive padding */
     text-align: center;
     background: white;
 }
 
 .moodboard-stat {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 8vw, 3.5rem); /* Responsive font size */
     font-weight: 700;
     color: #1a1a1a;
     line-height: 1;
@@ -11483,7 +11535,7 @@ body.neutral-theme * {
 .moodboard-card--text {
     display: flex;
     align-items: center;
-    padding: 24px;
+    padding: clamp(16px, 4vw, 24px); /* Responsive padding */
     background: white;
 }
 
@@ -11494,14 +11546,7 @@ body.neutral-theme * {
     line-height: 1.6;
 }
 
-.moodboard-card--text.moodboard-card--wide {
-    grid-column: span 2;
-}
-
-/* En grid de 3 columnas, ajustar wide */
-.moodboard-grid .moodboard-card--wide:not(.moodboard-card--fullwidth) {
-    grid-column: span 2;
-}
+/* Media queries para wide cards ahora están arriba con mobile-first */
 
 /* Collab card */
 .moodboard-card--collab {
@@ -12813,6 +12858,29 @@ img, video, iframe {
     .moodboard-grid {
         grid-template-columns: 1fr !important;
         gap: var(--space-sm) !important;
+    }
+    
+    /* Forzar moodboard cards a apilarse verticalmente en mobile */
+    .moodboard-card--tall,
+    .moodboard-card--wide,
+    .moodboard-card--fullwidth {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Asegurar que las imágenes dentro de las cards sean responsive */
+    .moodboard-card__image,
+    .moodboard-card__image img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    .moodboard-card--tall .moodboard-card__image {
+        min-height: 200px !important;
+        height: auto !important;
     }
     
     /* Ajustar padding de cards en mobile */
