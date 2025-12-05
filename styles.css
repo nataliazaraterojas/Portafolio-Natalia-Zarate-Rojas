@@ -436,11 +436,12 @@ section {
    HERO
    ======================================== */
 .hero {
-    min-height: auto;
+    min-height: 500px;
+    height: 500px;
     display: flex;
     align-items: center;
     position: relative;
-    padding: calc(var(--space-lg) + 80px) var(--space-lg) var(--space-lg);
+    padding: calc(var(--space-md) + 80px) var(--space-md) var(--space-md);
     overflow: hidden;
 }
 
@@ -482,7 +483,7 @@ section {
 .hero__image img {
     max-width: 100%;
     width: 100%;
-    max-height: 500px;
+    max-height: 400px;
     height: auto;
     object-fit: contain;
     object-position: center;
@@ -507,7 +508,13 @@ section {
     
     .hero__image img {
         max-width: 100%;
-        max-height: 350px;
+        max-height: 250px;
+    }
+    
+    .hero {
+        min-height: 400px;
+        height: auto;
+        padding: calc(var(--space-sm) + 80px) var(--space-sm) var(--space-sm);
     }
     
     .hero__actions {
@@ -516,26 +523,28 @@ section {
 }
 
 .hero__title {
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
 }
 
 .hero__greeting {
     display: block;
     font-family: var(--font-body);
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 600;
     color: var(--color-text);
     letter-spacing: -0.02em;
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: 8px;
     animation: fadeInUp 0.8s ease 0.2s both;
 }
 
 .hero__headline {
     font-family: var(--font-body);
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
     font-weight: 400;
     color: var(--color-text-muted);
+    line-height: 1.4;
+    margin-top: var(--space-sm);
     line-height: 1.5;
     margin-bottom: var(--space-md);
     animation: fadeInUp 0.8s ease 0.5s both;
