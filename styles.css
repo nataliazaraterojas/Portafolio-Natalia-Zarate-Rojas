@@ -552,7 +552,7 @@ section {
     .nav__links::before {
         content: '';
         position: fixed;
-        top: 60px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
@@ -570,15 +570,18 @@ section {
     
     .nav__links {
         position: fixed;
-        top: 60px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         flex-direction: column;
         background: rgba(255, 245, 247, 0.75);
         backdrop-filter: blur(10px);
-        padding: var(--space-xl) var(--space-lg);
-        gap: var(--space-md);
+        padding-top: 70px;
+        padding-left: var(--space-lg);
+        padding-right: var(--space-lg);
+        padding-bottom: var(--space-xl);
+        gap: 0;
         transform: translateX(100%);
         transition: transform var(--transition-normal);
         z-index: 1001;
@@ -591,18 +594,21 @@ section {
     
     .nav__links li {
         width: 100%;
-        background: transparent;
+        background: rgba(255, 245, 247, 0.75);
+        margin: 0;
+        padding: 0;
     }
     
     .nav__links a {
         display: block;
         width: 100%;
         font-size: 1rem;
-        padding: var(--space-sm) var(--space-md);
+        padding: var(--space-md) var(--space-md);
         color: var(--color-text);
         font-weight: 500;
         border-radius: var(--radius-md);
         transition: all var(--transition-fast);
+        background: rgba(255, 245, 247, 0.75);
     }
     
     .nav__links a:hover {
