@@ -226,7 +226,27 @@ const translations = {
         'profile.accordion.colsubsidio.item1': 'Co-leader of innovation and service design projects for recreation, tourism and health.',
         'profile.accordion.colsubsidio.item2': 'Experience redesign at Piscilago → <strong>-15% wait times</strong> / <strong>-10% food service</strong>.',
         'profile.accordion.colsubsidio.item3': 'Increase in digital adoption post-pandemic with online ticketing and segmented strategies.',
-        'profile.accordion.colsubsidio.item4': 'BLOC (Local Wellbeing) project: awarded at SER Colsubsidio 2020.'
+        'profile.accordion.colsubsidio.item4': 'BLOC (Local Wellbeing) project: awarded at SER Colsubsidio 2020.',
+        
+        // Highlights Section
+        'profile.highlights.podcast.desc': 'Conversation about how AI has become the central axis of product development, transforming team dynamics and technical collaboration.',
+        'profile.highlights.podcast.cta': 'See more →',
+        'profile.highlights.podcast.text': 'Talking about AI and design on <strong>La Suma+ DesignOps Latam</strong> - Ep. 89',
+        'profile.highlights.studio.desc': '4 days of intensive co-design creating EKUBA: a modular circuit that challenges hypervigilance and micro racism in public spaces in Bogotá.',
+        'profile.highlights.studio.cta': 'See more →',
+        'profile.highlights.studio.text': 'Winners of the <strong>Studio Shift</strong> workshop - Design Factory Javeriana',
+        'profile.highlights.bloc.desc': 'Experience and service design, transforming user interaction through field research, service design and strategies based on real behaviors to generate measurable social impact.',
+        'profile.highlights.bloc.cta': 'See more →',
+        'profile.highlights.bloc.text': 'Experience design for <strong>Bloc Colsubsidio</strong>',
+        'profile.highlights.innovation.desc': '80 hours of innovation training applying CREAR - ESTRUCTURAR - IMPLEMENTAR methodologies for specific cases of each business unit.',
+        'profile.highlights.innovation.cta': 'See more →',
+        'profile.highlights.innovation.text': 'Training as <strong>Innovation Mobilizer</strong> - Colsubsidio',
+        
+        // CTA Section
+        'profile.cta.title': 'Shall we work together?',
+        
+        // Footer
+        'profile.footer.text': 'designed with love by Natalia Zarate ♡'
     },
     es: {
         // Navigation
@@ -307,7 +327,27 @@ const translations = {
         'profile.accordion.colsubsidio.item1': 'Co-líder de proyectos de innovación y diseño de servicios para recreación, turismo y salud.',
         'profile.accordion.colsubsidio.item2': 'Rediseño de experiencia en Piscilago → <strong>-15% tiempos de espera</strong> / <strong>-10% atención en alimentación</strong>.',
         'profile.accordion.colsubsidio.item3': 'Aumento de adopción digital post-pandemia con boletería online y estrategias segmentadas.',
-        'profile.accordion.colsubsidio.item4': 'Proyecto BLOC (Bienestar Local): premiado en SER Colsubsidio 2020.'
+        'profile.accordion.colsubsidio.item4': 'Proyecto BLOC (Bienestar Local): premiado en SER Colsubsidio 2020.',
+        
+        // Highlights Section
+        'profile.highlights.podcast.desc': 'Conversación sobre cómo la IA se ha convertido en el eje central del desarrollo de producto, transformando la dinámica del equipo y la colaboración técnica.',
+        'profile.highlights.podcast.cta': 'Ver más →',
+        'profile.highlights.podcast.text': 'Hablando sobre IA y diseño en <strong>La Suma+ DesignOps Latam</strong> - Ep. 89',
+        'profile.highlights.studio.desc': '4 días de co-diseño intensivo creando EKUBA: un circuito modular que desafía la hipervigilancia y micro racismo en espacios públicos de Bogotá.',
+        'profile.highlights.studio.cta': 'Ver más →',
+        'profile.highlights.studio.text': 'Ganadores del workshop de <strong>Studio Shift</strong> - Design Factory Javeriana',
+        'profile.highlights.bloc.desc': 'Diseño de experiencias y servicios, transformando la interacción con los usuarios mediante investigación en campo, service design y estrategias basadas en comportamientos reales para generar impacto social medible.',
+        'profile.highlights.bloc.cta': 'Ver más →',
+        'profile.highlights.bloc.text': 'Diseño de experiencias para <strong>Bloc Colsubsidio</strong>',
+        'profile.highlights.innovation.desc': '80 horas de formación en innovación aplicando metodologías de CREAR - ESTRUCTURAR - IMPLEMENTAR para casos específicos de cada unidad de negocio.',
+        'profile.highlights.innovation.cta': 'Ver más →',
+        'profile.highlights.innovation.text': 'Formación como <strong>Movilizadora de Innovación</strong> - Colsubsidio',
+        
+        // CTA Section
+        'profile.cta.title': '¿Trabajamos juntos?',
+        
+        // Footer
+        'profile.footer.text': 'diseñado con amor por Natalia Zarate ♡'
     }
 };
 
