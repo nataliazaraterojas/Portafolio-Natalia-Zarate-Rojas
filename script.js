@@ -180,6 +180,36 @@ const translations = {
         
         // Recommended
         'recommended.title': 'Recommended',
+        'recommended.nng.title': 'Nielsen Norman Group',
+        'recommended.nng.desc': 'UX research and articles',
+        'recommended.uxc.title': 'UX Collective',
+        'recommended.uxc.desc': 'Design publication on Medium',
+        'recommended.dops.title': 'DesignOps Latam',
+        'recommended.dops.desc': 'Podcast about design and operations',
+        'recommended.figma.title': 'Figma Community',
+        'recommended.figma.desc': 'Design resources and templates',
+        
+        // Projects
+        'projects.tareas.title': 'TASKS AND PLANS',
+        'projects.tareas.category': 'product design',
+        'projects.breb.title': 'BRE-B',
+        'projects.breb.category': 'digital banking',
+        'projects.bpartners.title': 'BE-PARTNERS',
+        'projects.bpartners.category': 'fintech & crypto',
+        'projects.habiitemos.title': 'HABIITEMOS',
+        'projects.habiitemos.category': 'mobile app',
+        'projects.metodologias.title': 'AI METHODOLOGIES',
+        'projects.metodologias.category': 'ai + design',
+        'projects.bloc.title': 'BLOC',
+        'projects.bloc.category': 'service design',
+        
+        // Footer
+        'footer.cta': 'If you want to work with me, feel free to get in touch:',
+        'footer.location.label': '[ LOCATION ]',
+        'footer.location.value': 'Bogotá, Colombia',
+        'footer.info.label': '[ INFO ]',
+        'footer.social.label': '[ SOCIAL MEDIA ]',
+        'footer.cv': 'Download CV ↓',
         
         // Profile Page
         'profile.tag': 'PRODUCT & STRATEGIC DESIGNER',
@@ -281,6 +311,36 @@ const translations = {
         
         // Recommended
         'recommended.title': 'Recomendados',
+        'recommended.nng.title': 'Nielsen Norman Group',
+        'recommended.nng.desc': 'Investigación y artículos de UX',
+        'recommended.uxc.title': 'UX Collective',
+        'recommended.uxc.desc': 'Publicación de diseño en Medium',
+        'recommended.dops.title': 'DesignOps Latam',
+        'recommended.dops.desc': 'Podcast sobre diseño y operaciones',
+        'recommended.figma.title': 'Figma Community',
+        'recommended.figma.desc': 'Recursos y templates de diseño',
+        
+        // Projects
+        'projects.tareas.title': 'TAREAS Y PLANES',
+        'projects.tareas.category': 'product design',
+        'projects.breb.title': 'BRE-B',
+        'projects.breb.category': 'banca digital',
+        'projects.bpartners.title': 'BE-PARTNERS',
+        'projects.bpartners.category': 'fintech & cripto',
+        'projects.habiitemos.title': 'HABIITEMOS',
+        'projects.habiitemos.category': 'app mobile',
+        'projects.metodologias.title': 'METODOLOGÍAS IA',
+        'projects.metodologias.category': 'ia + design',
+        'projects.bloc.title': 'BLOC',
+        'projects.bloc.category': 'service design',
+        
+        // Footer
+        'footer.cta': 'Si quieres trabajar conmigo, no dudes en contactarme:',
+        'footer.location.label': '[ UBICACIÓN ]',
+        'footer.location.value': 'Bogotá, Colombia',
+        'footer.info.label': '[ INFO ]',
+        'footer.social.label': '[ REDES SOCIALES ]',
+        'footer.cv': 'Descargar CV ↓',
         
         // Profile Page
         'profile.tag': 'PRODUCT & STRATEGIC DESIGNER',
