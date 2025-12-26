@@ -618,7 +618,7 @@ section {
     
     /* Ocultar selector de idioma dentro del menú desplegable */
     .nav__links .nav__language-wrapper {
-        display: none;
+        display: none !important;
     }
     
     .nav__toggle {
@@ -627,13 +627,17 @@ section {
     
     /* Selector de idioma solo icono al lado del hamburger - mover fuera del menú */
     .nav__language-wrapper {
-        position: absolute;
-        right: 50px;
+        position: fixed !important;
+        right: 60px;
         top: 50%;
         transform: translateY(-50%);
-        display: flex;
+        display: flex !important;
         align-items: center;
         z-index: 1002;
+    }
+    
+    .nav__language-wrapper .language-selector {
+        position: relative;
     }
     
     .nav__language-wrapper .language-selector__button {
@@ -642,10 +646,12 @@ section {
         width: 40px;
         height: 40px;
         justify-content: center;
+        align-items: center;
         background: white;
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 50%;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex !important;
     }
     
     .nav__language-wrapper .language-selector__button:hover {
@@ -655,12 +661,15 @@ section {
     
     .nav__language-wrapper .language-selector__text,
     .nav__language-wrapper .language-selector__chevron {
-        display: none;
+        display: none !important;
     }
     
     .nav__language-wrapper .language-selector__flag {
-        font-size: 1.4rem;
-        margin: 0;
+        font-size: 1.4rem !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
     }
     
     .nav__language-wrapper .language-selector__dropdown {
