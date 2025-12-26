@@ -211,6 +211,42 @@ const translations = {
         'footer.social.label': '[ SOCIAL MEDIA ]',
         'footer.cv': 'Download CV ↓',
         
+        // Project Pages - Common Labels
+        'project.close': 'Close',
+        'project.client': 'CLIENT',
+        'project.team': 'TEAM',
+        'project.services': 'SERVICES',
+        'project.duration': 'DURATION',
+        'project.months': '8 months',
+        
+        // Project Pages - Common Sections
+        'project.introduction': 'Project Introduction',
+        'project.context': 'Context',
+        'project.problem': 'Problem',
+        'project.objectives': 'Project Objectives',
+        'project.role': 'My Role / Responsibilities',
+        'project.process': 'Process / Method',
+        'project.results': 'Results / Impact',
+        'project.learnings': 'Learnings',
+        
+        // Tareas y Planes
+        'project.tareas.context': 'UBITS, a leader in corporate training, needed a product that would connect learning with daily work execution. This is how Tasks and Plans was born, a module designed to become the operational center of the ecosystem: bringing together courses, assignments, objectives and analytics in a single experience.',
+        'project.tareas.problem': 'Without an integrated execution tool, user companies had to supplement UBITS with external platforms to manage tasks, priorities and work plans, fragmenting the experience and reducing adoption.',
+        
+        // B-Partners
+        'project.bpartners.client': 'Technical test',
+        'project.bpartners.team': 'Individual',
+        
+        // BLOC
+        'project.bloc.tag': 'Service Design · Colsubsidio',
+        'project.bloc.subtitle': 'Local Wellbeing Colsubsidio: A decentralized care model that brings compensation fund services closer to communities, transforming the way people access wellbeing, health and recreation.',
+        'project.bloc.context.title': 'Project Context',
+        'project.bloc.context.problem.title': 'The problem',
+        'project.bloc.context.problem.text': 'Colsubsidio had large service centers concentrated in specific areas of Bogotá, which created access barriers for remote communities. Many members did not take advantage of their benefits due to lack of knowledge or difficulty traveling.',
+        'project.bloc.context.opportunity.title': 'The opportunity',
+        'project.bloc.context.opportunity.text': 'Design a decentralized care model that would bring Colsubsidio\'s essential services directly to neighborhoods and communities, creating close, accessible contact points with a humanized service experience.',
+        'project.bloc.services.title': 'Designed services',
+        
         // Profile Page
         'profile.tag': 'PRODUCT & STRATEGIC DESIGNER',
         'profile.hero.title1': 'DESIGN',
@@ -341,6 +377,42 @@ const translations = {
         'footer.info.label': '[ INFO ]',
         'footer.social.label': '[ REDES SOCIALES ]',
         'footer.cv': 'Descargar CV ↓',
+        
+        // Project Pages - Common Labels
+        'project.close': 'Cerrar',
+        'project.client': 'CLIENTE',
+        'project.team': 'EQUIPO',
+        'project.services': 'SERVICIOS',
+        'project.duration': 'DURACIÓN',
+        'project.months': '8 meses',
+        
+        // Project Pages - Common Sections
+        'project.introduction': 'Introducción del Proyecto',
+        'project.context': 'Contexto',
+        'project.problem': 'Problema',
+        'project.objectives': 'Objetivos del Proyecto',
+        'project.role': 'Mi Rol / Responsabilidades',
+        'project.process': 'Proceso / Método',
+        'project.results': 'Resultados / Impacto',
+        'project.learnings': 'Aprendizajes',
+        
+        // Tareas y Planes
+        'project.tareas.context': 'UBITS, líder en formación corporativa, necesitaba un producto que conectara el aprendizaje con la ejecución diaria del trabajo. Así nace Tareas y Planes, un módulo diseñado para convertirse en el centro operativo del ecosistema: uniendo cursos, asignaciones, objetivos y analítica en una sola experiencia.',
+        'project.tareas.problem': 'Al no existir una herramienta de ejecución integrada, las empresas usuarias debían complementar UBITS con plataformas externas para gestionar tareas, prioridades y planes de trabajo, fragmentando la experiencia y reduciendo la adopción.',
+        
+        // B-Partners
+        'project.bpartners.client': 'Prueba técnica',
+        'project.bpartners.team': 'Individual',
+        
+        // BLOC
+        'project.bloc.tag': 'Diseño de Servicios · Colsubsidio',
+        'project.bloc.subtitle': 'Bienestar Local Colsubsidio: Un modelo de atención descentralizado que acerca los servicios de la caja de compensación a las comunidades, transformando la manera en que las personas acceden a bienestar, salud y recreación.',
+        'project.bloc.context.title': 'Contexto del Proyecto',
+        'project.bloc.context.problem.title': 'El problema',
+        'project.bloc.context.problem.text': 'Colsubsidio contaba con grandes centros de servicios concentrados en zonas específicas de Bogotá, lo que generaba barreras de acceso para comunidades alejadas. Muchos afiliados no aprovechaban sus beneficios por desconocimiento o dificultad para desplazarse.',
+        'project.bloc.context.opportunity.title': 'La oportunidad',
+        'project.bloc.context.opportunity.text': 'Diseñar un modelo de atención descentralizado que llevara los servicios esenciales de Colsubsidio directamente a los barrios y comunidades, creando puntos de contacto cercanos, accesibles y con una experiencia de servicio humanizada.',
+        'project.bloc.services.title': 'Servicios diseñados',
         
         // Profile Page
         'profile.tag': 'PRODUCT & STRATEGIC DESIGNER',
