@@ -575,7 +575,7 @@ section {
         right: 0;
         bottom: 0;
         flex-direction: column;
-        background: rgba(255, 245, 247, 0.95);
+        background: rgba(255, 245, 247, 0.75);
         backdrop-filter: blur(10px);
         padding: var(--space-xl) var(--space-lg);
         gap: var(--space-md);
@@ -610,21 +610,46 @@ section {
         background: rgba(255, 92, 141, 0.1);
     }
     
+    /* Ocultar selector de idioma dentro del menú desplegable */
     .nav__links .nav__language-wrapper {
-        width: 100%;
-    }
-    
-    .nav__links .language-selector {
-        width: 100%;
-    }
-    
-    .nav__links .language-selector__button {
-        width: 100%;
-        justify-content: center;
+        display: none;
     }
     
     .nav__toggle {
         display: flex;
+    }
+    
+    /* Selector de idioma solo icono al lado del hamburger */
+    .nav__language-wrapper {
+        display: flex;
+        align-items: center;
+        margin-right: var(--space-sm);
+    }
+    
+    .nav__language-wrapper .language-selector__button {
+        padding: 0.5rem;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+    
+    .nav__language-wrapper .language-selector__text,
+    .nav__language-wrapper .language-selector__chevron {
+        display: none;
+    }
+    
+    .nav__language-wrapper .language-selector__flag {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+    
+    .nav__language-wrapper .language-selector__dropdown {
+        right: 0;
+        top: calc(100% + 8px);
     }
 }
 
