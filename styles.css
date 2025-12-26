@@ -509,6 +509,22 @@ section {
     height: 20px;
 }
 
+/* Language Selector Flotante para páginas sin nav */
+.language-selector--float {
+    position: fixed;
+    top: 24px;
+    right: 90px;
+    z-index: 99998;
+}
+
+.language-selector--float .language-selector__button {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.language-selector--float .language-selector__button:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 .nav__toggle {
     display: none;
     flex-direction: column;

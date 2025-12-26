@@ -149,6 +149,7 @@ initProjectsTabs();
 const translations = {
     en: {
         // Navigation
+        'nav.home': 'Home',
         'nav.about': 'About me',
         'nav.projects': 'Projects',
         'nav.contact': 'Contact',
@@ -182,6 +183,7 @@ const translations = {
     },
     es: {
         // Navigation
+        'nav.home': 'Inicio',
         'nav.about': 'Sobre mí',
         'nav.projects': 'Proyectos',
         'nav.contact': 'Contacto',

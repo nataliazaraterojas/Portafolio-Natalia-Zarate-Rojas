@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +21,27 @@
             <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
     </a>
+    
+    <!-- Selector de idioma flotante -->
+    <div class="language-selector language-selector--float">
+        <button class="language-selector__button" id="languageSelectorBtn" type="button" aria-label="Select language">
+            <span class="language-selector__flag">🇺🇸</span>
+            <span class="language-selector__text">English</span>
+            <svg class="language-selector__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 4.5L6 7.5L9 4.5"/>
+            </svg>
+        </button>
+        <div class="language-selector__dropdown" id="languageDropdown">
+            <button class="language-selector__option language-selector__option--active" data-lang="en" type="button">
+                <span class="language-selector__flag">🇺🇸</span>
+                <span class="language-selector__text">English</span>
+            </button>
+            <button class="language-selector__option" data-lang="es" type="button">
+                <span class="language-selector__flag">🇪🇸</span>
+                <span class="language-selector__text">Spanish</span>
+            </button>
+        </div>
+    </div>
 
     <!-- Hero -->
     <section class="metodologias-hero">
