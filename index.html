@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +18,30 @@
     <nav class="nav">
         <a href="#" class="nav__logo">NZ</a>
         <ul class="nav__links">
-            <li><a href="perfil.html">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto" class="nav__cta">Contacto</a></li>
+            <li><a href="perfil.html" data-i18n="nav.about">Sobre mí</a></li>
+            <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+            <li><a href="#contacto" class="nav__cta" data-i18n="nav.contact">Contacto</a></li>
+            <li class="nav__language-wrapper">
+                <div class="language-selector">
+                    <button class="language-selector__button" id="languageSelectorBtn" type="button" aria-label="Select language">
+                        <span class="language-selector__flag">🇺🇸</span>
+                        <span class="language-selector__text">English</span>
+                        <svg class="language-selector__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 4.5L6 7.5L9 4.5"/>
+                        </svg>
+                    </button>
+                    <div class="language-selector__dropdown" id="languageDropdown">
+                        <button class="language-selector__option language-selector__option--active" data-lang="en" type="button">
+                            <span class="language-selector__flag">🇺🇸</span>
+                            <span class="language-selector__text">English</span>
+                        </button>
+                        <button class="language-selector__option" data-lang="es" type="button">
+                            <span class="language-selector__flag">🇪🇸</span>
+                            <span class="language-selector__text">Spanish</span>
+                        </button>
+                    </div>
+                </div>
+            </li>
         </ul>
         <button class="nav__toggle" aria-label="Menú">
             <span></span>
@@ -33,11 +54,11 @@
         <div class="hero__container">
             <div class="hero__content">
                 <h1 class="hero__title">
-                    <span class="hero__greeting">¡Hola! Soy Natalia</span>
+                    <span class="hero__greeting" data-i18n="hero.greeting">Hello! I'm Natalia</span>
                 </h1>
                 <p class="hero__headline">
-                    Diseño experiencias digitales <br>
-                    <span class="hero__highlight">memorables</span> para tu <span class="hero__rotating"><span class="hero__rotating-word">marca</span><span class="hero__rotating-word">negocio</span><span class="hero__rotating-word">startup</span><span class="hero__rotating-word">proyecto</span></span>
+                    <span data-i18n="hero.headline">I design digital experiences</span> <br>
+                    <span class="hero__highlight" data-i18n="hero.memorable">memorable</span> <span data-i18n="hero.for">for your</span> <span class="hero__rotating"><span class="hero__rotating-word" data-i18n="hero.rotating.brand">brand</span><span class="hero__rotating-word" data-i18n="hero.rotating.business">business</span><span class="hero__rotating-word" data-i18n="hero.rotating.startup">startup</span><span class="hero__rotating-word" data-i18n="hero.rotating.project">project</span></span>
                 </p>
             </div>
             <div class="hero__image">
@@ -60,13 +81,13 @@
         <div class="container">
             <div class="about__grid">
                 <div class="about__left">
-                    <h2 class="about__title">Senior Product <br>& Strategic <br>Designer</h2>
+                    <h2 class="about__title" data-i18n="about.title">Senior Product <br>& Strategic <br>Designer</h2>
                 </div>
                 <div class="about__right">
                     <div class="about__text">
-                        <p><strong>Tengo más de 6 años de experiencia</strong> en diseño de producto digital, UX/UI, innovación y diseño de servicios. Con experiencia y conocimiento en <strong>creación de experiencias a partir de IA</strong>, optimización de flujos y mejora de KPIs como conversión, adopción digital y satisfacción del cliente.</p>
-                        <p>He co-liderado y participado en proyectos de alto impacto en <strong>banca, educación, entretenimiento y servicios</strong>, trabajando con equipos multidisciplinarios bajo enfoques <strong>Lean UX, Agile Scrum y Design Thinking</strong>. Mi enfoque combina usabilidad, eficiencia y visión estratégica de producto.</p>
-                        <a href="perfil.html" class="about__link">Trayectoria laboral →</a>
+                        <p data-i18n="about.text1"><strong>I have more than 6 years of experience</strong> in digital product design, UX/UI, innovation and service design. With experience and knowledge in <strong>creating experiences from AI</strong>, flow optimization and improvement of KPIs such as conversion, digital adoption and customer satisfaction.</p>
+                        <p data-i18n="about.text2">I have co-led and participated in high-impact projects in <strong>banking, education, entertainment and services</strong>, working with multidisciplinary teams under <strong>Lean UX, Agile Scrum and Design Thinking</strong> approaches. My approach combines usability, efficiency and strategic product vision.</p>
+                        <a href="perfil.html" class="about__link" data-i18n="about.link">Work experience →</a>
                     </div>
                 </div>
             </div>
@@ -76,27 +97,27 @@
                         <span class="stat__number" data-target="10">0</span>
                         <span class="stat__plus">+</span>
                     </div>
-                    <span class="stat__label">Proyectos<br>completados</span>
+                    <span class="stat__label" data-i18n="about.stats.projects">Completed<br>projects</span>
                 </div>
                 <div class="stat">
                     <div class="stat__number-wrapper">
                         <span class="stat__number" data-target="6">0</span>
                         <span class="stat__plus">+</span>
                     </div>
-                    <span class="stat__label">Años de<br>experiencia</span>
+                    <span class="stat__label" data-i18n="about.stats.years">Years of<br>experience</span>
                 </div>
                 <div class="stat">
                     <div class="stat__number-wrapper">
                         <span class="stat__number" data-target="100">0</span>
                         <span class="stat__plus">%</span>
                     </div>
-                    <span class="stat__label">Clientes<br>satisfechos</span>
+                    <span class="stat__label" data-i18n="about.stats.clients">Satisfied<br>clients</span>
                 </div>
             </div>
             
             <!-- Logos Carousel -->
             <div class="logos-section">
-                <p class="logos-section__title">Empresas donde he trabajado</p>
+                <p class="logos-section__title" data-i18n="about.companies">Companies I've worked with</p>
                 <div class="logos-carousel">
                     <div class="logos-carousel__track">
                         <div class="logo-item">
@@ -134,7 +155,7 @@
     <section id="proyectos" class="projects-grid-section">
         <div class="container">
             <div class="section-header section-header--center">
-                <h2 class="section-title">Proyectos <span>destacados</span></h2>
+                <h2 class="section-title"><span data-i18n="projects.title">Projects</span> <span data-i18n="projects.highlighted">featured</span></h2>
             </div>
             
             <div class="portfolio-grid">
@@ -209,7 +230,7 @@
     <!-- Recomendados -->
     <section class="recommended-section">
         <div class="container">
-            <h3 class="recommended-title">Recomendados</h3>
+            <h3 class="recommended-title" data-i18n="recommended.title">Recommended</h3>
             <div class="recommended-grid">
                 <a href="https://www.nngroup.com/" target="_blank" class="recommended-item">
                     <span class="recommended-item__icon">📚</span>
