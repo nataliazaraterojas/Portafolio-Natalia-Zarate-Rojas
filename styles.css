@@ -13070,7 +13070,7 @@ img, video, iframe {
 }
 
 /* Asegurar que los carruseles no causen overflow */
-.carousel, .highlights-carousel {
+.carousel {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -13085,18 +13085,15 @@ img, video, iframe {
     -ms-overflow-style: none;
 }
 
-.carousel::-webkit-scrollbar,
-.highlights-carousel::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
     height: 4px;
 }
 
-.carousel::-webkit-scrollbar-track,
-.highlights-carousel::-webkit-scrollbar-track {
+.carousel::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.05);
 }
 
-.carousel::-webkit-scrollbar-thumb,
-.highlights-carousel::-webkit-scrollbar-thumb {
+.carousel::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 2px;
 }
@@ -13106,9 +13103,9 @@ img, video, iframe {
     display: none;
 }
 
-.certifications-carousel {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+/* Ocultar scrollbar del carrusel de highlights */
+.highlights-carousel::-webkit-scrollbar {
+    display: none !important;
 }
 
 /* Ajustes para elementos con anchos fijos problemáticos */
