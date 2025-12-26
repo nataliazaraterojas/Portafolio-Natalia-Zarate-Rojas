@@ -51,31 +51,37 @@ interactiveElements.forEach(el => {
 // ========================================
 const navToggle = document.querySelector('.nav__toggle');
 const navLinks = document.querySelector('.nav__links');
+const body = document.body;
 
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
+if (navToggle && navLinks) {
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         navLinks.classList.toggle('active');
         navToggle.classList.toggle('active');
+        body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
     
-    // Cerrar menú al hacer click en el overlay (fondo oscuro)
-    navLinks.addEventListener('click', (e) => {
-        // Si el click es en el overlay (el ::before), cerrar el menú
-        if (e.target === navLinks) {
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') && 
+            !navLinks.contains(e.target) && 
+            !navToggle.contains(e.target)) {
             navLinks.classList.remove('active');
             navToggle.classList.remove('active');
+            body.style.overflow = '';
         }
     });
-}
-
-// Cerrar menú al hacer click en un link
-const navLinksItems = document.querySelectorAll('.nav__links a');
-navLinksItems.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navToggle.classList.remove('active');
+    
+    // Cerrar menú al hacer click en un link
+    const navLinksItems = document.querySelectorAll('.nav__links a');
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+            body.style.overflow = '';
+        });
     });
-});
+}
 
 // ========================================
 // ESTADÍSTICAS ANIMADAS
