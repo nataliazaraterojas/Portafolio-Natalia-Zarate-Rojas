@@ -589,15 +589,38 @@ section {
         transform: translateX(0);
     }
     
+    .nav__links li {
+        width: 100%;
+        background: transparent;
+    }
+    
     .nav__links a {
+        display: block;
+        width: 100%;
         font-size: 1rem;
-        padding: var(--space-sm) 0;
+        padding: var(--space-sm) var(--space-md);
         color: var(--color-text);
         font-weight: 500;
+        border-radius: var(--radius-md);
+        transition: all var(--transition-fast);
     }
     
     .nav__links a:hover {
         color: var(--color-pink-hot);
+        background: rgba(255, 92, 141, 0.1);
+    }
+    
+    .nav__links .nav__language-wrapper {
+        width: 100%;
+    }
+    
+    .nav__links .language-selector {
+        width: 100%;
+    }
+    
+    .nav__links .language-selector__button {
+        width: 100%;
+        justify-content: center;
     }
     
     .nav__toggle {
