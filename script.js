@@ -423,16 +423,22 @@ if (localStorage.getItem('language')) {
 
 // Función para cambiar el idioma
 function changeLanguage(lang) {
-    if (!translations[lang]) return;
+    if (!translations[lang]) {
+        console.warn(`Language "${lang}" not found, defaulting to "en"`);
+        lang = 'en';
+    }
     
     currentLanguage = lang;
     localStorage.setItem('language', lang);
     document.documentElement.lang = lang;
     
     // Actualizar todos los elementos con data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(element => {
+    const elements = document.querySelectorAll('[data-i18n]');
+    console.log(`Applying language "${lang}" to ${elements.length} elements`);
+    
+    elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             const translation = translations[lang][key];
             
             if (element.tagName === 'INPUT' && element.type === 'text') {
@@ -442,6 +448,8 @@ function changeLanguage(lang) {
             } else {
                 element.innerHTML = translation;
             }
+        } else if (key) {
+            console.warn(`Translation key "${key}" not found for language "${lang}"`);
         }
     });
     
