@@ -412,7 +412,14 @@ const translations = {
 };
 
 // Estado del idioma - Por defecto inglés
-let currentLanguage = localStorage.getItem('language') || 'en';
+// Si no hay idioma guardado, usar inglés
+let currentLanguage = 'en';
+if (localStorage.getItem('language')) {
+    currentLanguage = localStorage.getItem('language');
+} else {
+    // Primera vez: establecer inglés por defecto
+    localStorage.setItem('language', 'en');
+}
 
 // Función para cambiar el idioma
 function changeLanguage(lang) {
@@ -514,16 +521,24 @@ function initLanguageSelector() {
 }
 
 // Inicializar cuando el DOM esté listo
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        const savedLang = localStorage.getItem('language') || 'en';
-        changeLanguage(savedLang);
-        initLanguageSelector();
-    });
-} else {
-    const savedLang = localStorage.getItem('language') || 'en';
+function initLanguage() {
+    // Obtener idioma guardado o usar inglés por defecto
+    let savedLang = localStorage.getItem('language');
+    if (!savedLang) {
+        savedLang = 'en';
+        localStorage.setItem('language', 'en');
+    }
+    
+    // Aplicar idioma
     changeLanguage(savedLang);
     initLanguageSelector();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguage);
+} else {
+    // DOM ya está listo, ejecutar inmediatamente
+    initLanguage();
 }
 
 // CONSOLE MESSAGE

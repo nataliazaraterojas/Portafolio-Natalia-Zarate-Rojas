@@ -294,6 +294,18 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Asegurar que el idioma se aplique correctamente
+        document.addEventListener('DOMContentLoaded', function() {
+            // Forzar aplicación de idioma si no se ha aplicado
+            setTimeout(function() {
+                const lang = localStorage.getItem('language') || 'en';
+                if (typeof changeLanguage === 'function') {
+                    changeLanguage(lang);
+                }
+            }, 100);
+        });
+    </script>
 </body>
 </html>
 
