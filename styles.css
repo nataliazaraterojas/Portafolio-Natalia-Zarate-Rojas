@@ -546,9 +546,51 @@ section {
 @media (max-width: 768px) {
     .nav {
         padding: var(--space-sm) var(--space-md);
+        height: 60px;
     }
     
-    /* Overlay sutil detrás del menú */
+    /* Ocultar selector de idioma dentro del menú */
+    .nav__links .nav__language-wrapper {
+        display: none;
+    }
+    
+    /* Selector de idioma como icono fijo al lado del hamburger */
+    .nav__language-wrapper {
+        position: fixed;
+        right: 50px;
+        top: 15px;
+        z-index: 1002;
+    }
+    
+    .nav__language-wrapper .language-selector__button {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav__language-wrapper .language-selector__text,
+    .nav__language-wrapper .language-selector__chevron {
+        display: none;
+    }
+    
+    .nav__language-wrapper .language-selector__flag {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+    
+    /* Menú hamburguesa */
+    .nav__toggle {
+        display: flex;
+        z-index: 1003;
+    }
+    
+    /* Overlay oscuro */
     .nav__links::before {
         content: '';
         position: fixed;
@@ -558,16 +600,17 @@ section {
         bottom: 0;
         background: rgba(0, 0, 0, 0.15);
         opacity: 0;
-        pointer-events: none;
-        transition: opacity var(--transition-normal);
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
         z-index: 1000;
     }
     
     .nav__links.active::before {
         opacity: 1;
-        pointer-events: auto;
+        visibility: visible;
     }
     
+    /* Menú desplegable */
     .nav__links {
         position: fixed;
         top: 0;
@@ -577,15 +620,12 @@ section {
         flex-direction: column;
         background: rgba(255, 245, 247, 0.75);
         backdrop-filter: blur(10px);
-        padding-top: 70px;
-        padding-left: var(--space-lg);
-        padding-right: var(--space-lg);
-        padding-bottom: var(--space-xl);
+        padding: 80px var(--space-lg) var(--space-lg);
         gap: 0;
         transform: translateX(100%);
-        transition: transform var(--transition-normal);
+        transition: transform 0.3s ease;
         z-index: 1001;
-        box-shadow: -2px 0 15px rgba(255, 92, 141, 0.1);
+        overflow-y: auto;
     }
     
     .nav__links.active {
@@ -594,7 +634,7 @@ section {
     
     .nav__links li {
         width: 100%;
-        background: rgba(255, 245, 247, 0.75);
+        list-style: none;
         margin: 0;
         padding: 0;
     }
@@ -602,13 +642,13 @@ section {
     .nav__links a {
         display: block;
         width: 100%;
+        padding: var(--space-md);
         font-size: 1rem;
-        padding: var(--space-md) var(--space-md);
         color: var(--color-text);
         font-weight: 500;
-        border-radius: var(--radius-md);
-        transition: all var(--transition-fast);
-        background: rgba(255, 245, 247, 0.75);
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.2s;
     }
     
     .nav__links a:hover {
@@ -616,65 +656,15 @@ section {
         background: rgba(255, 92, 141, 0.1);
     }
     
-    /* Ocultar selector de idioma dentro del menú desplegable */
-    .nav__links .nav__language-wrapper {
-        display: none !important;
+    .nav__links .nav__cta {
+        background: var(--color-green);
+        color: white !important;
+        text-align: center;
     }
     
-    .nav__toggle {
-        display: flex;
-    }
-    
-    /* Selector de idioma solo icono al lado del hamburger - mover fuera del menú */
-    .nav__language-wrapper {
-        position: fixed !important;
-        right: 60px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex !important;
-        align-items: center;
-        z-index: 1002;
-    }
-    
-    .nav__language-wrapper .language-selector {
-        position: relative;
-    }
-    
-    .nav__language-wrapper .language-selector__button {
-        padding: 0.5rem;
-        min-width: 40px;
-        width: 40px;
-        height: 40px;
-        justify-content: center;
-        align-items: center;
-        background: white;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 50%;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        display: flex !important;
-    }
-    
-    .nav__language-wrapper .language-selector__button:hover {
-        background: #f9f9f9;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    
-    .nav__language-wrapper .language-selector__text,
-    .nav__language-wrapper .language-selector__chevron {
-        display: none !important;
-    }
-    
-    .nav__language-wrapper .language-selector__flag {
-        font-size: 1.4rem !important;
-        margin: 0 !important;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .nav__language-wrapper .language-selector__dropdown {
-        right: 0;
-        top: calc(100% + 8px);
+    .nav__links .nav__cta:hover {
+        background: var(--color-green-light);
+        color: white !important;
     }
 }
 
