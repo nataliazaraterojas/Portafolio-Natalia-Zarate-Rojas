@@ -346,6 +346,24 @@ const translations = {
         'project.breb.team.title': 'Design Team',
         'project.breb.team.subtitle': 'Banco de Bogotá',
         'project.breb.notes.title': 'Process notes',
+        'project.breb.results.adoption': 'Adoption in 6 months',
+        'project.breb.results.time': 'Average registration time',
+        'project.breb.results.satisfaction': 'User satisfaction',
+        'project.breb.results.keys': 'Keys registered',
+        
+        // Habiitemos - Extended
+        'project.habiitemos.value.text': 'A clear, safe and compatibility-focused experience to find shared housing. The app transforms an informal and chaotic process into an intuitive solution with verified profiles, intelligent filters and a guided flow that facilitates quick and reliable decisions.',
+        'project.habiitemos.value.point1': 'Verified profiles with relevant and transparent information.',
+        'project.habiitemos.value.point2': 'Intelligent filters based on lifestyle and habits.',
+        'project.habiitemos.value.point3': 'Matching system that prioritizes real compatibility.',
+        'project.habiitemos.value.point4': 'Intuitive flow that reduces friction and speeds up the search.',
+        'project.habiitemos.value.point5': 'Experience centered on security and informed decisions.',
+        'project.habiitemos.data.title': 'Did you know...?',
+        'project.habiitemos.data.subtitle': 'Data on shared housing in Colombia · Reference 2022',
+        'project.habiitemos.data.card1': 'Are willing to share housing with <strong>maximum 2 roommates</strong>.',
+        'project.habiitemos.data.card2': 'Prefer them to be from their <strong>friends</strong> circle.',
+        'project.habiitemos.data.card3': 'Would like to meet their roommates <strong>in person</strong> before moving in.',
+        'project.habiitemos.data.card4': 'Would like to be <strong>advised during</strong> their search process.',
         
         // BLOC
         'project.bloc.tag': 'Service Design · Colsubsidio',
@@ -703,6 +721,24 @@ const translations = {
         'project.breb.team.title': 'Equipo de Diseño',
         'project.breb.team.subtitle': 'Banco de Bogotá',
         'project.breb.notes.title': 'Notas del proceso',
+        'project.breb.results.adoption': 'Adopción en 6 meses',
+        'project.breb.results.time': 'Tiempo promedio de registro',
+        'project.breb.results.satisfaction': 'Satisfacción de usuario',
+        'project.breb.results.keys': 'Llaves registradas',
+        
+        // Habiitemos - Extended (Spanish)
+        'project.habiitemos.value.text': 'Una experiencia clara, segura y centrada en la compatibilidad para encontrar vivienda compartida. La app transforma un proceso informal y caótico en una solución intuitiva con perfiles verificados, filtros inteligentes y un flujo guiado que facilita decisiones rápidas y confiables.',
+        'project.habiitemos.value.point1': 'Perfiles verificados con información relevante y transparente.',
+        'project.habiitemos.value.point2': 'Filtros inteligentes según estilo de vida y hábitos.',
+        'project.habiitemos.value.point3': 'Matching system que prioriza la compatibilidad real.',
+        'project.habiitemos.value.point4': 'Flujo intuitivo que reduce fricción y agiliza la búsqueda.',
+        'project.habiitemos.value.point5': 'Experiencia centrada en seguridad y decisiones informadas.',
+        'project.habiitemos.data.title': '¿Sabías que...?',
+        'project.habiitemos.data.subtitle': 'Datos sobre vivienda compartida en Colombia · Referencia 2022',
+        'project.habiitemos.data.card1': 'Están dispuestos a compartir vivienda con <strong>máximo 2 roomies</strong>.',
+        'project.habiitemos.data.card2': 'Prefieren que sean de su círculo de <strong>amigos</strong>.',
+        'project.habiitemos.data.card3': 'Desearía conocer de forma <strong>presencial</strong> a sus roomies antes de mudarse.',
+        'project.habiitemos.data.card4': 'Le gustaría ser <strong>asesorado durante</strong> su proceso de búsqueda.',
         
         // BLOC
         'project.bloc.tag': 'Diseño de Servicios · Colsubsidio',
