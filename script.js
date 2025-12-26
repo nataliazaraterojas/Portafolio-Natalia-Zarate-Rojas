@@ -412,10 +412,13 @@ const translations = {
 };
 
 // Estado del idioma - SIEMPRE inglés por defecto
-// Limpiar cualquier idioma guardado anteriormente y forzar inglés
-localStorage.removeItem('language');
-localStorage.setItem('language', 'en');
-let currentLanguage = 'en';
+// Si no hay idioma guardado, usar inglés. Si hay uno guardado, respetarlo.
+let savedLang = localStorage.getItem('language');
+if (!savedLang) {
+    localStorage.setItem('language', 'en');
+    savedLang = 'en';
+}
+let currentLanguage = savedLang;
 
 // Función para cambiar el idioma
 function changeLanguage(lang) {
@@ -526,29 +529,29 @@ function initLanguageSelector() {
 
 // Inicializar cuando el DOM esté listo
 function initLanguage() {
-    // SIEMPRE usar inglés por defecto si no hay idioma guardado
+    // Obtener idioma guardado, si no hay ninguno usar inglés
     let savedLang = localStorage.getItem('language');
-    
-    // Si no hay idioma guardado o es la primera vez, forzar inglés
-    if (!savedLang || savedLang === null) {
+    if (!savedLang) {
         savedLang = 'en';
         localStorage.setItem('language', 'en');
     }
     
-    // Aplicar idioma
+    console.log('Initializing language:', savedLang);
+    
+    // Aplicar idioma inmediatamente
     changeLanguage(savedLang);
+    
+    // Inicializar selector
     initLanguageSelector();
 }
 
-// Ejecutar inmediatamente si el DOM ya está listo
+// Ejecutar inmediatamente cuando el script se carga
+// Si el DOM ya está listo, ejecutar ahora
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-        // Pequeño delay para asegurar que todos los elementos estén en el DOM
-        setTimeout(initLanguage, 50);
-    });
+    document.addEventListener('DOMContentLoaded', initLanguage);
 } else {
-    // DOM ya está listo, ejecutar inmediatamente con pequeño delay
-    setTimeout(initLanguage, 50);
+    // DOM ya está listo, ejecutar inmediatamente
+    initLanguage();
 }
 
 // CONSOLE MESSAGE
