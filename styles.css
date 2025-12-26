@@ -552,7 +552,7 @@ section {
     .nav__links::before {
         content: '';
         position: fixed;
-        top: 0;
+        top: 60px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -560,7 +560,7 @@ section {
         opacity: 0;
         pointer-events: none;
         transition: opacity var(--transition-normal);
-        z-index: -1;
+        z-index: 1000;
     }
     
     .nav__links.active::before {
