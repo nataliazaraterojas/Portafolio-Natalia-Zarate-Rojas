@@ -317,12 +317,13 @@ section {
     right: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: var(--space-sm) var(--space-lg);
     background: rgba(255, 245, 247, 0.85);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 92, 141, 0.1);
+    gap: var(--space-md);
 }
 
 .nav__logo {
@@ -331,6 +332,7 @@ section {
     font-weight: 600;
     color: var(--color-pink-hot);
     letter-spacing: -0.02em;
+    margin-right: auto;
 }
 
 .nav__links {
