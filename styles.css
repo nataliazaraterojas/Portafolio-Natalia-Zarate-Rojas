@@ -589,7 +589,7 @@ section {
         display: flex;
         align-items: center;
         order: 2;
-        margin-left: -4px;
+        margin-left: 6px;
         z-index: 1004;
     }
     
