@@ -665,10 +665,12 @@ section {
         flex-direction: column;
         background: rgba(255, 245, 247, 0.6);
         backdrop-filter: blur(10px);
-        padding: var(--space-xl) var(--space-lg);
-        gap: var(--space-sm);
+        padding: var(--space-md) var(--space-lg);
+        gap: 8px;
         z-index: 1001;
         overflow-y: auto;
+        justify-content: flex-start;
+        align-items: stretch;
     }
     
     /* Overlay oscuro */
@@ -694,7 +696,7 @@ section {
     .nav__links a {
         display: block;
         width: 100%;
-        padding: var(--space-md) var(--space-lg);
+        padding: 16px var(--space-lg);
         font-size: 1rem;
         color: var(--color-text);
         font-weight: 500;
@@ -702,7 +704,7 @@ section {
         border-radius: 8px;
         transition: all 0.2s;
         background: rgba(255, 245, 247, 0.6);
-        margin-bottom: var(--space-sm);
+        margin-bottom: 0;
     }
     
     .nav__links a:hover {
