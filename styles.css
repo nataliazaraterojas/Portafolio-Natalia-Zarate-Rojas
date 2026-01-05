@@ -574,22 +574,31 @@ section {
         top: 50%;
         transform: translateY(-50%);
         z-index: 1004;
+        margin: 0;
     }
     
-    /* Selector de idioma como icono al lado del hamburger */
+    /* Contenedor para selector de idioma y hamburger */
+    .nav__language-wrapper,
+    .nav__toggle {
+        position: relative;
+        z-index: 1004;
+    }
+    
+    /* Selector de idioma como icono */
     .nav__language-wrapper {
-        position: absolute;
-        right: 60px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1003;
-        width: 40px;
-        height: 40px;
+        order: 1;
+        margin-right: 16px;
+    }
+    
+    .nav__language-wrapper .language-selector {
+        position: relative;
     }
     
     .nav__language-wrapper .language-selector__button {
         width: 40px;
         height: 40px;
+        min-width: 40px;
+        min-height: 40px;
         padding: 0;
         justify-content: center;
         align-items: center;
@@ -602,7 +611,7 @@ section {
     
     .nav__language-wrapper .language-selector__text,
     .nav__language-wrapper .language-selector__chevron {
-        display: none;
+        display: none !important;
     }
     
     .nav__language-wrapper .language-selector__flag {
@@ -611,18 +620,29 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
+        line-height: 1;
+    }
+    
+    .nav__language-wrapper .language-selector__dropdown {
+        right: 0;
+        top: calc(100% + 8px);
     }
     
     /* Menú hamburguesa */
     .nav__toggle {
         display: flex;
-        z-index: 1004;
-        position: absolute;
-        right: var(--space-md);
-        top: 50%;
-        transform: translateY(-50%);
+        order: 2;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
         width: 30px;
         height: 30px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
     }
     
     /* Menú desplegable */
