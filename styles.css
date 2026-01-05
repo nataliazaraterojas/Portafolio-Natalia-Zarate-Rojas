@@ -10461,8 +10461,9 @@ section {
     display: inline-block;
     width: 100%;
     padding: 18px 32px;
-    background: linear-gradient(135deg, var(--color-coral) 0%, var(--color-peach) 100%);
-    color: white;
+    background: transparent;
+    border: 2px solid var(--color-pink-hot);
+    color: var(--color-pink-hot);
     text-align: center;
     font-family: var(--font-body);
     font-size: 0.85rem;
@@ -10470,10 +10471,13 @@ section {
     letter-spacing: 2px;
     text-decoration: none;
     transition: all 0.3s;
+    border-radius: 50px;
 }
 
 .footer-new__cv:hover {
     transform: translateY(-2px);
+    background: var(--color-pink-hot);
+    color: white;
     box-shadow: 0 8px 24px rgba(255, 92, 141, 0.3);
 }
 
