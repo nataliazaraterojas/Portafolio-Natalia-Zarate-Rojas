@@ -569,32 +569,20 @@ section {
     }
     
     .nav__logo {
-        position: absolute;
-        left: var(--space-md);
-        top: 50%;
-        transform: translateY(-50%);
+        margin-right: auto;
         z-index: 1004;
-        margin: 0;
     }
     
-    /* Contenedor derecho para selector de idioma y hamburger */
-    .nav::after {
-        content: '';
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        position: absolute;
-        right: var(--space-md);
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1004;
+    .nav__links {
+        display: none;
     }
     
     /* Selector de idioma como icono */
     .nav__language-wrapper {
-        position: relative;
-        z-index: 1004;
+        display: flex;
+        align-items: center;
         margin-right: 12px;
+        z-index: 1004;
     }
     
     .nav__language-wrapper .language-selector {
@@ -649,7 +637,6 @@ section {
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        position: relative;
         z-index: 1004;
     }
     
