@@ -577,11 +577,12 @@ section {
         display: none;
     }
     
-    /* Selector de idioma como icono */
+    /* Selector de idioma como icono - más a la derecha */
     .nav__language-wrapper {
         display: flex;
         align-items: center;
-        margin-right: 4px;
+        order: 2;
+        margin-left: 2px;
         z-index: 1004;
     }
     
@@ -623,7 +624,7 @@ section {
         top: calc(100% + 8px);
     }
     
-    /* Menú hamburguesa */
+    /* Menú hamburguesa - a la izquierda del selector de idioma */
     .nav__toggle {
         display: flex;
         flex-direction: column;
@@ -637,6 +638,7 @@ section {
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
+        order: 1;
         z-index: 1004;
     }
     
