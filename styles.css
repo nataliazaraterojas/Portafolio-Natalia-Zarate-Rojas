@@ -650,13 +650,9 @@ section {
         z-index: 1004;
     }
     
-    /* Menú desplegable */
+    /* Menú desplegable - SIMPLE Y FUNCIONAL */
     .nav__links {
         display: none;
-    }
-    
-    .nav__links.active {
-        display: flex !important;
         position: fixed;
         top: 60px;
         left: 0;
@@ -664,14 +660,14 @@ section {
         bottom: 0;
         flex-direction: column;
         background: rgba(255, 245, 247, 0.98);
-        backdrop-filter: blur(10px);
-        padding: 24px var(--space-lg);
-        gap: 12px;
+        padding: 20px;
+        gap: 0;
         z-index: 1005;
         overflow-y: auto;
-        justify-content: flex-start;
-        align-items: stretch;
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav__links.active {
+        display: flex;
     }
     
     .nav__links li {
@@ -679,37 +675,42 @@ section {
         list-style: none;
         margin: 0;
         padding: 0;
-        display: block;
     }
     
     .nav__links a {
         display: block;
         width: 100%;
-        padding: 18px 24px;
-        font-size: 1.1rem;
+        padding: 16px 20px;
+        font-size: 1rem;
         color: var(--color-text);
         font-weight: 500;
         text-decoration: none;
-        border-radius: 12px;
-        transition: all 0.2s ease;
+        border-radius: 8px;
         background: rgba(255, 255, 255, 0.9);
-        margin: 0;
-        opacity: 1;
-        visibility: visible;
-        border: 1px solid rgba(255, 92, 141, 0.1);
+        margin-bottom: 8px;
+        border: none;
     }
     
-    .nav__links a:hover,
-    .nav__links a:focus {
+    .nav__links a::after {
+        display: none;
+    }
+    
+    .nav__links a:hover {
         background: rgba(255, 255, 255, 1);
-        transform: translateX(8px);
-        border-color: rgba(255, 92, 141, 0.3);
-        box-shadow: 0 2px 8px rgba(255, 92, 141, 0.15);
     }
     
-    /* Animación del hamburger cuando está activo */
+    /* Hamburger icon */
+    .nav__toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--color-pink-hot);
+        transition: all 0.3s;
+        margin: 4px 0;
+    }
+    
     .nav__toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(6px, 6px);
     }
     
     .nav__toggle.active span:nth-child(2) {
@@ -717,16 +718,7 @@ section {
     }
     
     .nav__toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-    
-    .nav__toggle span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background: var(--color-pink-hot);
-        transition: all 0.3s ease;
-        margin: 3px 0;
+        transform: rotate(-45deg) translate(6px, -6px);
     }
     
     .nav__links a:hover {
