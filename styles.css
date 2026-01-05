@@ -566,6 +566,7 @@ section {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 0;
     }
     
     .nav__logo {
@@ -577,12 +578,18 @@ section {
         display: none;
     }
     
+    /* Contenedor para botones derecho */
+    .nav__language-wrapper,
+    .nav__toggle {
+        margin: 0;
+    }
+    
     /* Selector de idioma como icono - más a la derecha */
     .nav__language-wrapper {
         display: flex;
         align-items: center;
         order: 2;
-        margin-left: 0;
+        margin-left: -4px;
         z-index: 1004;
     }
     
@@ -639,6 +646,7 @@ section {
         align-items: center;
         flex-shrink: 0;
         order: 1;
+        margin-right: 0;
         z-index: 1004;
     }
     
