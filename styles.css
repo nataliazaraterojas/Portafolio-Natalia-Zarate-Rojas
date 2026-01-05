@@ -581,7 +581,7 @@ section {
     .nav__language-wrapper {
         display: flex;
         align-items: center;
-        margin-right: 12px;
+        margin-right: 16px;
         z-index: 1004;
     }
     
