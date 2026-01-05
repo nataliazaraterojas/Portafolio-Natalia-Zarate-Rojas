@@ -663,27 +663,15 @@ section {
         right: 0;
         bottom: 0;
         flex-direction: column;
-        background: rgba(255, 245, 247, 0.95);
+        background: rgba(255, 245, 247, 0.98);
         backdrop-filter: blur(10px);
-        padding: var(--space-md) var(--space-lg);
-        gap: 8px;
-        z-index: 1005 !important;
+        padding: 24px var(--space-lg);
+        gap: 12px;
+        z-index: 1005;
         overflow-y: auto;
         justify-content: flex-start;
         align-items: stretch;
-    }
-    
-    /* Overlay oscuro - detrás del menú */
-    .nav__links.active::before {
-        content: '';
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.15);
-        z-index: 999;
-        pointer-events: none;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
     }
     
     .nav__links li {
@@ -691,27 +679,54 @@ section {
         list-style: none;
         margin: 0;
         padding: 0;
+        display: block;
     }
     
     .nav__links a {
         display: block;
         width: 100%;
-        padding: 16px var(--space-lg);
-        font-size: 1rem;
-        color: var(--color-text) !important;
+        padding: 18px 24px;
+        font-size: 1.1rem;
+        color: var(--color-text);
         font-weight: 500;
         text-decoration: none;
-        border-radius: 8px;
-        transition: all 0.2s;
-        background: rgba(255, 255, 255, 0.8);
-        margin-bottom: 0;
-        opacity: 1 !important;
-        visibility: visible !important;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+        background: rgba(255, 255, 255, 0.9);
+        margin: 0;
+        opacity: 1;
+        visibility: visible;
+        border: 1px solid rgba(255, 92, 141, 0.1);
     }
     
-    .nav__links a:hover {
+    .nav__links a:hover,
+    .nav__links a:focus {
         background: rgba(255, 255, 255, 1);
-        transform: translateX(4px);
+        transform: translateX(8px);
+        border-color: rgba(255, 92, 141, 0.3);
+        box-shadow: 0 2px 8px rgba(255, 92, 141, 0.15);
+    }
+    
+    /* Animación del hamburger cuando está activo */
+    .nav__toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .nav__toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav__toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .nav__toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--color-pink-hot);
+        transition: all 0.3s ease;
+        margin: 3px 0;
     }
     
     .nav__links a:hover {
