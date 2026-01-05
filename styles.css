@@ -577,17 +577,24 @@ section {
         margin: 0;
     }
     
-    /* Contenedor para selector de idioma y hamburger */
-    .nav__language-wrapper,
-    .nav__toggle {
-        position: relative;
+    /* Contenedor derecho para selector de idioma y hamburger */
+    .nav::after {
+        content: '';
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        position: absolute;
+        right: var(--space-md);
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 1004;
     }
     
     /* Selector de idioma como icono */
     .nav__language-wrapper {
-        order: 1;
-        margin-right: 16px;
+        position: relative;
+        z-index: 1004;
+        margin-right: 12px;
     }
     
     .nav__language-wrapper .language-selector {
@@ -631,7 +638,6 @@ section {
     /* Menú hamburguesa */
     .nav__toggle {
         display: flex;
-        order: 2;
         flex-direction: column;
         gap: 5px;
         background: none;
@@ -643,6 +649,8 @@ section {
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
+        position: relative;
+        z-index: 1004;
     }
     
     /* Menú desplegable */
