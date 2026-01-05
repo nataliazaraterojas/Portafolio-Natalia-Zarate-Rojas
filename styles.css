@@ -656,24 +656,24 @@ section {
     }
     
     .nav__links.active {
-        display: flex;
+        display: flex !important;
         position: fixed;
         top: 60px;
         left: 0;
         right: 0;
         bottom: 0;
         flex-direction: column;
-        background: rgba(255, 245, 247, 0.6);
+        background: rgba(255, 245, 247, 0.95);
         backdrop-filter: blur(10px);
         padding: var(--space-md) var(--space-lg);
         gap: 8px;
-        z-index: 1001;
+        z-index: 1005 !important;
         overflow-y: auto;
         justify-content: flex-start;
         align-items: stretch;
     }
     
-    /* Overlay oscuro */
+    /* Overlay oscuro - detrás del menú */
     .nav__links.active::before {
         content: '';
         position: fixed;
@@ -682,7 +682,7 @@ section {
         right: 0;
         bottom: 0;
         background: rgba(0, 0, 0, 0.15);
-        z-index: 1000;
+        z-index: 999;
         pointer-events: none;
     }
     
@@ -698,13 +698,20 @@ section {
         width: 100%;
         padding: 16px var(--space-lg);
         font-size: 1rem;
-        color: var(--color-text);
+        color: var(--color-text) !important;
         font-weight: 500;
         text-decoration: none;
         border-radius: 8px;
         transition: all 0.2s;
-        background: rgba(255, 245, 247, 0.6);
+        background: rgba(255, 255, 255, 0.8);
         margin-bottom: 0;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .nav__links a:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: translateX(4px);
     }
     
     .nav__links a:hover {
