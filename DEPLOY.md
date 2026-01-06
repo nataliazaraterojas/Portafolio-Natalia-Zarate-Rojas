@@ -133,3 +133,4 @@ Si tienes problemas, revisa:
 - La consola del navegador (F12)
 - Los archivos de configuración (netlify.toml, vercel.json)
 
+

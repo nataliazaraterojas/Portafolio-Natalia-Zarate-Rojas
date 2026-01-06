@@ -25,33 +25,35 @@
     <!-- Navegación -->
     <nav class="nav nav--light">
         <a href="index.html" class="nav__logo">NZ</a>
-        <ul class="nav__links">
-            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-            <li><a href="index.html#proyectos" data-i18n="nav.projects">Projects</a></li>
-            <li><a href="index.html#contacto" class="nav__cta" data-i18n="nav.contact">Contact</a></li>
-            <li class="nav__language-wrapper">
-                <div class="language-selector">
-                    <button class="language-selector__button" id="languageSelectorBtn" type="button" aria-label="Select language">
+        <div class="nav__overlay" aria-hidden="true"></div>
+        <ul class="nav__links" id="nav-menu" role="menu" aria-label="Menú de navegación">
+            <li role="none"><a href="index.html" data-i18n="nav.home" role="menuitem" tabindex="-1">Home</a></li>
+            <li role="none"><a href="index.html#proyectos" data-i18n="nav.projects" role="menuitem" tabindex="-1">Projects</a></li>
+            <li role="none"><a href="index.html#contacto" class="nav__cta" data-i18n="nav.contact" role="menuitem" tabindex="-1">Contact</a></li>
+        </ul>
+        <div class="nav__language-wrapper">
+            <div class="language-selector">
+                <button class="language-selector__button" id="languageSelectorBtn" type="button" aria-label="Select language">
+                    <span class="language-selector__flag">🇺🇸</span>
+                    <span class="language-selector__text">English</span>
+                    <svg class="language-selector__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 4.5L6 7.5L9 4.5"/>
+                    </svg>
+                </button>
+                <div class="language-selector__dropdown" id="languageDropdown">
+                    <button class="language-selector__option language-selector__option--active" data-lang="en" type="button">
                         <span class="language-selector__flag">🇺🇸</span>
                         <span class="language-selector__text">English</span>
-                        <svg class="language-selector__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 4.5L6 7.5L9 4.5"/>
-                        </svg>
                     </button>
-                    <div class="language-selector__dropdown" id="languageDropdown">
-                        <button class="language-selector__option language-selector__option--active" data-lang="en" type="button">
-                            <span class="language-selector__flag">🇺🇸</span>
-                            <span class="language-selector__text">English</span>
-                        </button>
-                        <button class="language-selector__option" data-lang="es" type="button">
-                            <span class="language-selector__flag">🇪🇸</span>
-                            <span class="language-selector__text">Spanish</span>
-                        </button>
-                    </div>
+                    <button class="language-selector__option" data-lang="es" type="button">
+                        <span class="language-selector__flag">🇪🇸</span>
+                        <span class="language-selector__text">Spanish</span>
+                    </button>
                 </div>
-            </li>
-        </ul>
-        <button class="nav__toggle" aria-label="Menú">
+            </div>
+        </div>
+        <button class="nav__toggle" aria-label="Menú" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
             <span></span>
             <span></span>
         </button>

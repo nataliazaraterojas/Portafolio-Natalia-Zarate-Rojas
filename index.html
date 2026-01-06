@@ -17,10 +17,11 @@
     <!-- Navegación -->
     <nav class="nav">
         <a href="#" class="nav__logo">NZ</a>
-        <ul class="nav__links">
-            <li><a href="perfil.html" data-i18n="nav.about">Sobre mí</a></li>
-            <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
-            <li><a href="#contacto" class="nav__cta" data-i18n="nav.contact">Contacto</a></li>
+        <div class="nav__overlay" aria-hidden="true"></div>
+        <ul class="nav__links" id="nav-menu" role="menu" aria-label="Menú de navegación">
+            <li role="none"><a href="perfil.html" data-i18n="nav.about" role="menuitem" tabindex="-1">Sobre mí</a></li>
+            <li role="none"><a href="#proyectos" data-i18n="nav.projects" role="menuitem" tabindex="-1">Proyectos</a></li>
+            <li role="none"><a href="#contacto" class="nav__cta" data-i18n="nav.contact" role="menuitem" tabindex="-1">Contacto</a></li>
         </ul>
         <div class="nav__language-wrapper">
             <div class="language-selector">
@@ -43,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <button class="nav__toggle" aria-label="Menú">
+        <button class="nav__toggle" aria-label="Menú" aria-expanded="false" aria-controls="nav-menu">
             <span></span>
             <span></span>
             <span></span>

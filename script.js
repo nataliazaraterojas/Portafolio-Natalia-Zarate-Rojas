@@ -47,39 +47,118 @@ interactiveElements.forEach(el => {
 });
 
 // ========================================
-// NAVEGACIÓN MÓVIL
+// NAVEGACIÓN MÓVIL - DRAWER LATERAL CON ACCESIBILIDAD
 // ========================================
 const navToggle = document.querySelector('.nav__toggle');
 const navLinks = document.querySelector('.nav__links');
+const navOverlay = document.querySelector('.nav__overlay');
+const navLanguageWrapper = document.querySelector('.nav__language-wrapper');
 const body = document.body;
 
-if (navToggle && navLinks) {
-    navToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        navLinks.classList.toggle('active');
-        navToggle.classList.toggle('active');
-        body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+// Función para abrir el menú
+function openMenu() {
+    navLinks.classList.add('active');
+    navToggle.classList.add('active');
+    navToggle.setAttribute('aria-expanded', 'true');
+    body.style.overflow = 'hidden';
+    
+    // Hacer los links enfocables
+    const menuItems = navLinks.querySelectorAll('a');
+    menuItems.forEach(item => {
+        item.setAttribute('tabindex', '0');
     });
     
-    // Cerrar menú al hacer click fuera
-    document.addEventListener('click', (e) => {
-        if (navLinks.classList.contains('active') && 
-            !navLinks.contains(e.target) && 
-            !navToggle.contains(e.target)) {
-            navLinks.classList.remove('active');
-            navToggle.classList.remove('active');
-            body.style.overflow = '';
+    // Enfocar el primer item del menú
+    if (menuItems.length > 0) {
+        setTimeout(() => menuItems[0].focus(), 100);
+    }
+}
+
+// Función para cerrar el menú
+function closeMenu() {
+    navLinks.classList.remove('active');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    body.style.overflow = '';
+    
+    // Hacer los links no enfocables cuando el menú está cerrado
+    const menuItems = navLinks.querySelectorAll('a');
+    menuItems.forEach(item => {
+        item.setAttribute('tabindex', '-1');
+    });
+    
+    // Devolver el foco al botón toggle
+    navToggle.focus();
+}
+
+if (navToggle && navLinks && navOverlay) {
+    // Abrir/cerrar menú al hacer click en el toggle
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        
+        if (navLinks.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
         }
     });
     
-    // Cerrar menú al hacer click en un link
+    // Cerrar menú al hacer click en un link del menú
     const navLinksItems = document.querySelectorAll('.nav__links a');
     navLinksItems.forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            navToggle.classList.remove('active');
-            body.style.overflow = '';
+            closeMenu();
         });
+    });
+    
+    // Cerrar menú con tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+    
+    // Navegación con teclado dentro del menú
+    navLinksItems.forEach((link, index) => {
+        link.addEventListener('keydown', (e) => {
+            // Flecha abajo: siguiente item
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                const nextIndex = (index + 1) % navLinksItems.length;
+                navLinksItems[nextIndex].focus();
+            }
+            // Flecha arriba: item anterior
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                const prevIndex = (index - 1 + navLinksItems.length) % navLinksItems.length;
+                navLinksItems[prevIndex].focus();
+            }
+            // Home: primer item
+            if (e.key === 'Home') {
+                e.preventDefault();
+                navLinksItems[0].focus();
+            }
+            // End: último item
+            if (e.key === 'End') {
+                e.preventDefault();
+                navLinksItems[navLinksItems.length - 1].focus();
+            }
+        });
+    });
+    
+    // Prevenir que el selector de idioma cierre el menú
+    if (navLanguageWrapper) {
+        navLanguageWrapper.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+    
+    // Inicializar estado: menú cerrado
+    navToggle.setAttribute('aria-expanded', 'false');
+    const menuItems = navLinks.querySelectorAll('a');
+    menuItems.forEach(item => {
+        item.setAttribute('tabindex', '-1');
     });
 }
 
